@@ -1,0 +1,257 @@
+{
+  "baseline": [
+    {
+      "pid": 113280,
+      "exe": "D:\\Program Files\\sw2025\\SOLIDWORKS Corp 2025\\SOLIDWORKS\\SLDWORKS.exe",
+      "created_utc": "2026-10-05T17:13:06.079823+00:00"
+    }
+  ],
+  "output_dir": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail",
+  "source_files": [
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_upper.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_right.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_left.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_lower.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_upper.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_lower.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_face.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\black_visor.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\ear_right.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\ear_left.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_front_panel.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_rear_panel.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_rear_lower.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_rear_upper.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_front_lower.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_front_upper.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_rear_lower.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_rear_upper.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_front_lower.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_front_upper.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_frame_bridge.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_1.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_1.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_2.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_2.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_3.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_3.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_4.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_4.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\frame_reference.SLDPRT",
+    "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\SD-V67_continuous_head_tail.SLDASM"
+  ],
+  "solidworks_rot_entries": [],
+  "pid": 113280,
+  "initial_documents": [],
+  "borrowed_existing_instance": true,
+  "closing_snapshot": [
+    {
+      "title": "head_editable_master",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\process\\head_editable_master.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "body_editable_master",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\process\\body_editable_master.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "upper_split",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\process\\upper_split.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "body_upper",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_upper.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "body_right",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_right.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "body_left",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_left.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "body_lower",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_lower.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_upper",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_upper.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_lower",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_lower.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_face",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_face.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "black_visor",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\black_visor.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "ear_right",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\ear_right.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "ear_left",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\ear_left.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "body_front_panel",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_front_panel.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "body_rear_panel",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_rear_panel.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "mount_L_rear_lower",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_rear_lower.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "mount_L_rear_upper",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_rear_upper.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "mount_L_front_lower",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_front_lower.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "mount_L_front_upper",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_front_upper.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "mount_R_rear_lower",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_rear_lower.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "mount_R_rear_upper",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_rear_upper.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "mount_R_front_lower",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_front_lower.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "mount_R_front_upper",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_front_upper.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_frame_bridge",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_frame_bridge.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_screw_M3x20_1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_1.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_nut_M3_envelope_1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_1.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_screw_M3x20_2",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_2.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_nut_M3_envelope_2",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_2.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_screw_M3x20_3",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_3.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_nut_M3_envelope_3",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_3.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_screw_M3x20_4",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_4.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "head_nut_M3_envelope_4",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_4.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "frame_reference",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\frame_reference.SLDPRT",
+      "dirty": false
+    },
+    {
+      "title": "SD-V67_continuous_head_tail",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\SD-V67_continuous_head_tail.SLDASM",
+      "dirty": false
+    }
+  ],
+  "closed": [
+    "head_editable_master",
+    "body_editable_master",
+    "upper_split",
+    "body_upper",
+    "body_right",
+    "body_left",
+    "body_lower",
+    "head_upper",
+    "head_lower",
+    "head_face",
+    "black_visor",
+    "ear_right",
+    "ear_left",
+    "body_front_panel",
+    "body_rear_panel",
+    "mount_L_rear_lower",
+    "mount_L_rear_upper",
+    "mount_L_front_lower",
+    "mount_L_front_upper",
+    "mount_R_rear_lower",
+    "mount_R_rear_upper",
+    "mount_R_front_lower",
+    "mount_R_front_upper",
+    "head_frame_bridge",
+    "head_screw_M3x20_1",
+    "head_nut_M3_envelope_1",
+    "head_screw_M3x20_2",
+    "head_nut_M3_envelope_2",
+    "head_screw_M3x20_3",
+    "head_nut_M3_envelope_3",
+    "head_screw_M3x20_4",
+    "head_nut_M3_envelope_4",
+    "frame_reference",
+    "SD-V67_continuous_head_tail"
+  ],
+  "remaining_documents": [],
+  "left_user_instance_open": true
+}

@@ -1,0 +1,12 @@
+fr_hip_joint: 0.0
+fr_thigh_joint: -0.6715534335840251
+fr_calf_joint: 1.1
+fl_hip_joint: 0.0
+fl_thigh_joint: 0.6715534335840251
+fl_calf_joint: -1.1
+rr_hip_joint: 0.0
+rr_thigh_joint: -0.6715534335840251
+rr_calf_joint: 1.1
+rl_hip_joint: 0.0
+rl_thigh_joint: 0.6715534335840251
+rl_calf_joint: -1.1

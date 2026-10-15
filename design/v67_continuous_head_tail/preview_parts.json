@@ -1,0 +1,99 @@
+{
+  "parts": [
+    {
+      "name": "camera_bezel",
+      "mesh": "meshes/camera_bezel.stl",
+      "color": "#20252d",
+      "category": "optical",
+      "bounds_mm": [
+        [
+          259.1499938964844,
+          -9.300000190734863,
+          159.6999969482422
+        ],
+        [
+          260.04998779296875,
+          9.300000190734863,
+          178.3000030517578
+        ]
+      ],
+      "kinematic_group": "fixed"
+    },
+    {
+      "name": "camera_glass",
+      "mesh": "meshes/camera_glass.stl",
+      "color": "#143044",
+      "category": "optical",
+      "bounds_mm": [
+        [
+          259.9750061035156,
+          -6.800000190734863,
+          162.1999969482422
+        ],
+        [
+          260.32501220703125,
+          6.800000190734863,
+          175.8000030517578
+        ]
+      ],
+      "kinematic_group": "fixed"
+    },
+    {
+      "name": "camera_pupil",
+      "mesh": "meshes/camera_pupil.stl",
+      "color": "#03070b",
+      "category": "optical",
+      "bounds_mm": [
+        [
+          260.30499267578125,
+          -3.0,
+          166.0
+        ],
+        [
+          260.4549865722656,
+          3.0,
+          172.0
+        ]
+      ],
+      "kinematic_group": "fixed"
+    },
+    {
+      "name": "ear_hub_cap_right",
+      "mesh": "meshes/ear_hub_cap_right.stl",
+      "color": "#373f47",
+      "category": "ear",
+      "bounds_mm": [
+        [
+          167.5,
+          -87.1500015258789,
+          154.5
+        ],
+        [
+          184.5,
+          -85.6500015258789,
+          171.5
+        ]
+      ],
+      "kinematic_group": "fixed"
+    },
+    {
+      "name": "ear_hub_cap_left",
+      "mesh": "meshes/ear_hub_cap_left.stl",
+      "color": "#373f47",
+      "category": "ear",
+      "bounds_mm": [
+        [
+          167.5,
+          85.6500015258789,
+          154.5
+        ],
+        [
+          184.5,
+          87.1500015258789,
+          171.5
+        ]
+      ],
+      "kinematic_group": "fixed"
+    }
+  ]
+}

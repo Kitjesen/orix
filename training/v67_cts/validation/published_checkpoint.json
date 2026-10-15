@@ -1,0 +1,41 @@
+{
+  "checkpoint": "model_16100.pt",
+  "iteration": 16100,
+  "bytes": 26716179,
+  "saved_at": "2026-10-15T15:35:57.758167+00:00",
+  "keys": [
+    "model_state_dict",
+    "optimizer_state_dict",
+    "optimizer_stu_enc_state_dict",
+    "iter",
+    "infos"
+  ],
+  "terrain_shape": [
+    11,
+    20
+  ],
+  "terrain_env_count": 4096,
+  "terrain_mean_level": 6.109375,
+  "terrain_histogram": [
+    96,
+    186,
+    223,
+    281,
+    381,
+    429,
+    466,
+    551,
+    540,
+    523,
+    420
+  ],
+  "forward_speed_range": [
+    -0.15,
+    1.5
+  ],
+  "optimizer_state_present": true,
+  "student_optimizer_state_present": true,
+  "note": "Frozen intermediate R6 checkpoint, training continues toward model_22796.pt. Terrain state requires matching terrain grid and env count.",
+  "teacher_optimizer_state_count": 23,
+  "student_optimizer_state_count": 16
+}

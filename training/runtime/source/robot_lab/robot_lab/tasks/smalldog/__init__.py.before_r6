@@ -1,0 +1,66 @@
+"""SmallDog V67 low-speed flat-ground task."""
+import gymnasium as gym
+
+gym.register(
+    id='RobotLab-SmallDog-V67-Flat-v0',
+    entry_point='robot_lab.tasks.go2.env.go2_env:Go2Env',
+    disable_env_checker=True,
+    kwargs={
+        'env_cfg_entry_point': f'{__name__}.env_cfg:SmallDogEnvCfg',
+        'rsl_rl_cfg_entry_point': f'{__name__}.rsl_rl_cfg:SmallDogMoECTSRunnerCfg',
+    },
+)
+
+
+gym.register(
+    id='RobotLab-SmallDog-V67-Rough-v0',
+    entry_point='robot_lab.tasks.go2.env.go2_env:Go2Env',
+    disable_env_checker=True,
+    kwargs={
+        'env_cfg_entry_point': f'{__name__}.rough_cfg:SmallDogRoughEnvCfg',
+        'rsl_rl_cfg_entry_point': f'{__name__}.rough_cfg:SmallDogRoughRunnerCfg',
+    },
+)
+
+
+# Experimental gait-shaped ablation; baseline Rough-v0 remains unchanged.
+gym.register(
+    id='RobotLab-SmallDog-V67-FlatGait-v0',
+    entry_point='robot_lab.tasks.go2.env.go2_env:Go2Env',
+    disable_env_checker=True,
+    kwargs={
+        'env_cfg_entry_point': f'{__name__}.gait_cfg:SmallDogFlatGaitEnvCfg',
+        'rsl_rl_cfg_entry_point': f'{__name__}.gait_cfg:SmallDogGaitRunnerCfg',
+    },
+)
+
+gym.register(
+    id='RobotLab-SmallDog-V67-RoughGait-v0',
+    entry_point='robot_lab.tasks.go2.env.go2_env:Go2Env',
+    disable_env_checker=True,
+    kwargs={
+        'env_cfg_entry_point': f'{__name__}.gait_cfg:SmallDogGaitEnvCfg',
+        'rsl_rl_cfg_entry_point': f'{__name__}.gait_cfg:SmallDogGaitRunnerCfg',
+    },
+)
+
+
+gym.register(
+    id='RobotLab-SmallDog-V67-FlatRefinedGait-v0',
+    entry_point='robot_lab.tasks.go2.env.go2_env:Go2Env',
+    disable_env_checker=True,
+    kwargs={
+        'env_cfg_entry_point': f'{__name__}.refinement_cfg:SmallDogRefinedFlatGaitEnvCfg',
+        'rsl_rl_cfg_entry_point': f'{__name__}.refinement_cfg:SmallDogRefinedGaitRunnerCfg',
+    },
+)
+
+gym.register(
+    id='RobotLab-SmallDog-V67-RoughRefinedGait-v0',
+    entry_point='robot_lab.tasks.go2.env.go2_env:Go2Env',
+    disable_env_checker=True,
+    kwargs={
+        'env_cfg_entry_point': f'{__name__}.refinement_cfg:SmallDogRefinedGaitEnvCfg',
+        'rsl_rl_cfg_entry_point': f'{__name__}.refinement_cfg:SmallDogRefinedGaitRunnerCfg',
+    },
+)

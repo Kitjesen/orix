@@ -1,0 +1,89 @@
+{
+  "cmf_hex": {
+    "main": "#ecebe5",
+    "lower": "#39454c",
+    "joint": "#59646c",
+    "thigh": "#b6c0c7",
+    "accent": "#39b8d6",
+    "foot": "#182128"
+  },
+  "orthographic": true,
+  "three_view_parallel_scale_mm": 300,
+  "image_size_px": [
+    1440,
+    900
+  ],
+  "scale_px_per_mm": 1.5,
+  "cameras": {
+    "side": [
+      [
+        [
+          20,
+          -1000,
+          -40
+        ],
+        [
+          20,
+          0,
+          -40
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "SIDE / head to +X"
+    ],
+    "front": [
+      [
+        [
+          1000,
+          0,
+          -40
+        ],
+        [
+          0,
+          0,
+          -40
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "FRONT / look along -X"
+    ],
+    "top": [
+      [
+        [
+          20,
+          0,
+          1000
+        ],
+        [
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "TOP / head to +X"
+    ]
+  },
+  "unchanged_geometry": [
+    "face",
+    "ears",
+    "frame",
+    "motors",
+    "legs",
+    "body_sides"
+  ],
+  "appearance_scope": "render material study, not manufacturing coating specification",
+  "contact_sheet": "uniform resize, no geometry distortion"
+}

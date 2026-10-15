@@ -1,0 +1,1130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="v67_sim_r3">
+  <!--V67 simulation: geometry-derived shell inertia; estimated payload; sampled joint motion window.-->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0245522926853 1.26679550047e-06 0.0711604293371" rpy="0 0 0" />
+      <mass value="4.55274065391" />
+      <inertia ixx="0.0312085136287" ixy="8.00589228668e-07" ixz="-0.00846665285039" iyy="0.0689226586554" iyz="-5.16162853754e-07" izz="0.0782673207027" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/base_link.STL" />
+      </geometry>
+      <material name="v67_base_link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <visual name="orix_board_envelope_trial">
+      <origin xyz="0 0 0.110" rpy="0 0 0" />
+      <geometry>
+        <box size="0.220 0.120 0.002" />
+      </geometry>
+      <material name="orix_board_teal">
+        <color rgba="0.12 0.55 0.45 1" />
+      </material>
+    </visual>
+    <collision name="body">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.2 0.12" />
+      </geometry>
+    </collision>
+    <visual name="v67_body_upper">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/body_upper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_body_upper">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_body_right_upper">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/body_right_paint_upper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_body_right_upper">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_body_right_lower">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/body_right_paint_lower.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_body_right_lower">
+        <color rgba="0.2235294117647059 0.27058823529411763 0.2980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_body_left_upper">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/body_left_paint_upper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_body_left_upper">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_body_left_lower">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/body_left_paint_lower.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_body_left_lower">
+        <color rgba="0.2235294117647059 0.27058823529411763 0.2980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_body_lower">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/body_lower.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_body_lower">
+        <color rgba="0.2235294117647059 0.27058823529411763 0.2980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_upper">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_upper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_upper">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_lower">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_lower.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_lower">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_face">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_face.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_face">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_black_visor">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/black_visor.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_black_visor">
+        <color rgba="0.03137254901960784 0.058823529411764705 0.08235294117647059 1" />
+      </material>
+    </visual>
+    <visual name="v67_ear_right">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/ear_right.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_ear_right">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_ear_left">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/ear_left.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_ear_left">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_body_front_panel">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/body_front_panel.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_body_front_panel">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_body_rear_panel">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/body_rear_panel.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_body_rear_panel">
+        <color rgba="0.9254901960784314 0.9215686274509803 0.8980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_mount_L_rear_lower">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/mount_L_rear_lower.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_mount_L_rear_lower">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_mount_L_rear_upper">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/mount_L_rear_upper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_mount_L_rear_upper">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_mount_L_front_lower">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/mount_L_front_lower.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_mount_L_front_lower">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_mount_L_front_upper">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/mount_L_front_upper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_mount_L_front_upper">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_mount_R_rear_lower">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/mount_R_rear_lower.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_mount_R_rear_lower">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_mount_R_rear_upper">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/mount_R_rear_upper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_mount_R_rear_upper">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_mount_R_front_lower">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/mount_R_front_lower.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_mount_R_front_lower">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_mount_R_front_upper">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/mount_R_front_upper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_mount_R_front_upper">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_frame_bridge">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_frame_bridge.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_frame_bridge">
+        <color rgba="0.2235294117647059 0.27058823529411763 0.2980392156862745 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_screw_M3x20_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_screw_M3x20_1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_screw_M3x20_1">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_nut_M3_envelope_1">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_nut_M3_envelope_1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_nut_M3_envelope_1">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_screw_M3x20_2">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_screw_M3x20_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_screw_M3x20_2">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_nut_M3_envelope_2">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_nut_M3_envelope_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_nut_M3_envelope_2">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_screw_M3x20_3">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_screw_M3x20_3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_screw_M3x20_3">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_nut_M3_envelope_3">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_nut_M3_envelope_3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_nut_M3_envelope_3">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_screw_M3x20_4">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_screw_M3x20_4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_screw_M3x20_4">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_head_nut_M3_envelope_4">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/head_nut_M3_envelope_4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_head_nut_M3_envelope_4">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_camera_bezel">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/camera_bezel.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_camera_bezel">
+        <color rgba="0.12549019607843137 0.1450980392156863 0.17647058823529413 1" />
+      </material>
+    </visual>
+    <visual name="v67_camera_glass">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/camera_glass.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_camera_glass">
+        <color rgba="0.0784313725490196 0.18823529411764706 0.26666666666666666 1" />
+      </material>
+    </visual>
+    <visual name="v67_camera_pupil">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/camera_pupil.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_camera_pupil">
+        <color rgba="0.011764705882352941 0.027450980392156862 0.043137254901960784 1" />
+      </material>
+    </visual>
+    <visual name="v67_ear_hub_cap_right">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/ear_hub_cap_right.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_ear_hub_cap_right">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_ear_hub_cap_left">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/ear_hub_cap_left.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_ear_hub_cap_left">
+        <color rgba="0.3176470588235294 0.3568627450980392 0.396078431372549 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_36">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_36.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_36">
+        <color rgba="0.0784313725490196 0.12941176470588237 0.16470588235294117 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_37">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_37.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_37">
+        <color rgba="0.0784313725490196 0.12941176470588237 0.16470588235294117 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_38">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_38.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_38">
+        <color rgba="0.2235294117647059 0.7215686274509804 0.8392156862745098 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_39">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_39.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_39">
+        <color rgba="0.2235294117647059 0.7215686274509804 0.8392156862745098 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_40">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_40.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_40">
+        <color rgba="0.0784313725490196 0.12941176470588237 0.16470588235294117 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_41">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_41.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_41">
+        <color rgba="0.0784313725490196 0.12941176470588237 0.16470588235294117 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_42">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_42.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_42">
+        <color rgba="0.2235294117647059 0.7215686274509804 0.8392156862745098 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_43">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_43.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_43">
+        <color rgba="0.2235294117647059 0.7215686274509804 0.8392156862745098 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_44">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_44.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_44">
+        <color rgba="0.28627450980392155 0.8352941176470589 0.9215686274509803 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_45">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_45.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_45">
+        <color rgba="0.28627450980392155 0.8352941176470589 0.9215686274509803 1" />
+      </material>
+    </visual>
+    <visual name="v67_graphic_46">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/v67_visual_preview/graphic_46.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="v67_graphic_46">
+        <color rgba="0.023529411764705882 0.043137254901960784 0.06666666666666667 1" />
+      </material>
+    </visual>
+    <collision name="v67_belly">
+      <origin xyz="-0.004 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.212 0.031" />
+      </geometry>
+    </collision>
+    <collision name="v67_side_-1">
+      <origin xyz="-0.004 -0.109 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.246 0.012 0.105" />
+      </geometry>
+    </collision>
+    <collision name="v67_side_1">
+      <origin xyz="-0.004 0.109 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.246 0.012 0.105" />
+      </geometry>
+    </collision>
+    <collision name="v67_upper">
+      <geometry>
+        <mesh filename="../meshes/collision_upper.stl" />
+      </geometry>
+    </collision>
+    <collision name="v67_head">
+      <geometry>
+        <mesh filename="../meshes/collision_head.stl" />
+      </geometry>
+    </collision>
+    <collision name="v67_ear_left">
+      <geometry>
+        <mesh filename="../meshes/collision_ear_left.stl" />
+      </geometry>
+    </collision>
+    <collision name="v67_ear_right">
+      <geometry>
+        <mesh filename="../meshes/collision_ear_right.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="battery_guide_link">
+    <inertial>
+      <origin xyz="0 0 0.0191666666667" rpy="0 0 0" />
+      <mass value="0.0637794" />
+      <inertia ixx="0.0001280087991" ixy="0" ixz="0" iyy="5.951385735e-05" iyz="0" izz="0.00018688840575" />
+    </inertial>
+    <visual name="battery_guide_trial">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/battery_guide_trial.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="battery_guide_gray">
+        <color rgba="0.24 0.28 0.32 1" />
+      </material>
+    </visual>
+    <collision name="battery_tray">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.102 0.157 0.006" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="battery_guide_mount_trial" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="battery_guide_link" />
+  </joint>
+  <link name="battery_pack_trial_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.6" />
+      <inertia ixx="0.00345666666667" ixy="0" ixz="0" iyy="0.00173333333333" iyz="0" izz="0.00388333333333" />
+    </inertial>
+    <visual name="battery_envelope_trial">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.090 0.145 0.070" />
+      </geometry>
+      <material name="battery_trial_orange">
+        <color rgba="0.90 0.42 0.12 1" />
+      </material>
+    </visual>
+    <collision name="battery">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.145 0.07" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="battery_pack_mount_trial" type="fixed">
+    <origin xyz="0 0 0.057" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="battery_pack_trial_link" />
+  </joint>
+  <link name="fr_hip_Link">
+    <inertial>
+      <origin xyz="0.05183718184706129 0.01981398347800543 -2.861355660680695e-09" rpy="0 0 0" />
+      <mass value="0.4651299408768717" />
+      <inertia ixx="0.0002846905300104955" ixy="-2.199235631648155e-05" ixz="-4.987884481126956e-11" iyy="0.0004210597194331015" iyz="-1.843797865576939e-11" izz="0.0003349082862322541" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/fr_hip_Link.STL" />
+      </geometry>
+      <material name="v67_fr_hip_Link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <collision name="hip_housing">
+      <origin xyz="0.0542211422 0.009 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.0402" length="0.073" />
+      </geometry>
+    </collision>
+    <collision name="hip_neck">
+      <origin xyz="0.01286830852 0 -0.0003145383671" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02673661681 0.0559999997 0.0571082419" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fr_hip_joint" type="revolute">
+    <origin xyz="0.13 -0.058 0.06" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="fr_hip_Link" />
+    <axis xyz="-1 0 0" />
+    <limit lower="-0.3" upper="0.3" effort="7" velocity="42.93509959906051" />
+  </joint>
+  <link name="fr_thigh_Link">
+    <inertial>
+      <origin xyz="-0.02922473945967433 -0.05615068558734709 0.003274210928084048" rpy="0 0 0" />
+      <mass value="1.127515571031291" />
+      <inertia ixx="0.001568100080375134" ixy="-0.00122248130497114" ixz="0.0003086747371008633" iyy="0.004939123896738577" iyz="0.0001375236510213496" izz="0.005589577654477936" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/fr_thigh_Link.STL" />
+      </geometry>
+      <material name="v67_fr_thigh_Link">
+        <color rgba="0.7137254901960784 0.7529411764705882 0.7803921568627451 1" />
+      </material>
+    </visual>
+    <collision name="thigh_housing">
+      <origin xyz="0 -0.05225 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.1045" />
+      </geometry>
+    </collision>
+    <collision name="thigh_distal">
+      <origin xyz="-0.1738674546 -0.09334500134 0.0137600884" rpy="0 -0.1745329252 0" />
+      <geometry>
+        <box size="0.1068535123 0.03679001129 0.04876928548" />
+      </geometry>
+    </collision>
+    <collision name="thigh_proximal">
+      <origin xyz="-0.07168729681 -0.09070000052 0.01963903611" rpy="0 -1.335176878 0" />
+      <geometry>
+        <box size="0.06459318809 0.0281499902 0.1023809275" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fr_thigh_joint" type="revolute">
+    <origin xyz="0.054221 0 0" rpy="0 0 0" />
+    <parent link="fr_hip_Link" />
+    <child link="fr_thigh_Link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.25" upper="0.15" effort="7" velocity="42.93509959906051" />
+  </joint>
+  <link name="fr_calf_Link">
+    <inertial>
+      <origin xyz="0.1147775506624876 -3.925585585984326e-06 -0.03026169673877835" rpy="0 0 0" />
+      <mass value="0.2302904588983836" />
+      <inertia ixx="0.0001656996747369212" ixy="6.097409953117448e-08" ixz="0.0003749378221601671" iyy="0.001346570398158974" iyz="-5.755050007195694e-09" izz="0.001198529649192755" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/fr_calf_Link.STL" />
+      </geometry>
+      <material name="v67_fr_calf_Link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <collision name="knee_end">
+      <origin xyz="-0.002 0 0.002" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.0272843267" length="0.0145" />
+      </geometry>
+    </collision>
+    <collision name="calf_shaft">
+      <origin xyz="0.0807807511 1.862645149e-09 -0.01579912391" rpy="0 -1.400626725 0" />
+      <geometry>
+        <box size="0.03034752887 0.03260646558 0.1372543562" />
+      </geometry>
+    </collision>
+    <collision name="calf_ankle">
+      <origin xyz="0.1735639237 1.862645149e-09 -0.05430005779" rpy="0 -1.095194106 0" />
+      <geometry>
+        <box size="0.04865639571 0.04179452157 0.09094059094" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fr_calf_joint" type="revolute">
+    <origin xyz="-0.20622 -0.09345 0" rpy="0 0 0" />
+    <parent link="fr_thigh_Link" />
+    <child link="fr_calf_Link" />
+    <axis xyz="0 1 0" />
+    <limit lower="0.4" upper="2.1" effort="14" velocity="21.467549799530254" />
+  </joint>
+  <link name="fr_foot_Link">
+    <inertial>
+      <origin xyz="0.02256745139073893 -1.675570542258864e-05 -4.459926176973023e-05" rpy="0 0 0" />
+      <mass value="0.09867470155176498" />
+      <inertia ixx="3.825644806759067e-05" ixy="-1.160222976062084e-08" ixz="-4.675109334140898e-08" iyy="3.767577743426418e-05" iyz="-7.462012269411751e-09" izz="2.862901454592417e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/fr_foot_Link.STL" />
+      </geometry>
+      <material name="v67_fr_foot_Link">
+        <color rgba="0.09411764705882353 0.12941176470588237 0.1568627450980392 1" />
+      </material>
+    </visual>
+    <collision name="foot_contact">
+      <origin xyz="0.01658312383 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fr_foot_joint" type="fixed">
+    <origin xyz="0.193 0 -0.065485" rpy="0 0.89994 0" />
+    <parent link="fr_calf_Link" />
+    <child link="fr_foot_Link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="fl_hip_Link">
+    <inertial>
+      <origin xyz="0.05183718184706129 -0.01981398347800539 2.861355693959747e-09" rpy="0 0 0" />
+      <mass value="0.4651299408768717" />
+      <inertia ixx="0.0002846905300104954" ixy="2.199235631648144e-05" ixz="4.987884481299441e-11" iyy="0.0004210597194331016" iyz="-1.843797864823496e-11" izz="0.0003349082862322541" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/fl_hip_Link.STL" />
+      </geometry>
+      <material name="v67_fl_hip_Link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <collision name="hip_housing">
+      <origin xyz="0.0542211422 -0.009 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.0402" length="0.073" />
+      </geometry>
+    </collision>
+    <collision name="hip_neck">
+      <origin xyz="0.01286830852 -0 -0.0003145383671" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02673661681 0.0559999997 0.0571082419" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fl_hip_joint" type="revolute">
+    <origin xyz="0.13 0.058 0.06" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="fl_hip_Link" />
+    <axis xyz="-1 0 0" />
+    <limit lower="-0.3" upper="0.3" effort="7" velocity="42.93509959906051" />
+  </joint>
+  <link name="fl_thigh_Link">
+    <inertial>
+      <origin xyz="-0.02922475406877481 0.0561506352532667 0.003274187516260913" rpy="0 0 0" />
+      <mass value="1.127513998286581" />
+      <inertia ixx="0.001568096363872502" ixy="0.001222480647349873" ixz="0.0003086743077576005" iyy="0.004939122469905942" iyz="-0.0001375227488896097" izz="0.005589574837729208" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/fl_thigh_Link.STL" />
+      </geometry>
+      <material name="v67_fl_thigh_Link">
+        <color rgba="0.7137254901960784 0.7529411764705882 0.7803921568627451 1" />
+      </material>
+    </visual>
+    <collision name="thigh_housing">
+      <origin xyz="0 0.05225 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.1045" />
+      </geometry>
+    </collision>
+    <collision name="thigh_distal">
+      <origin xyz="-0.1738674546 0.09334500134 0.0137600884" rpy="0 -0.1745329252 0" />
+      <geometry>
+        <box size="0.1068535123 0.03679001129 0.04876928548" />
+      </geometry>
+    </collision>
+    <collision name="thigh_proximal">
+      <origin xyz="-0.07168729681 0.09070000052 0.01963903611" rpy="0 -1.335176878 0" />
+      <geometry>
+        <box size="0.06459318809 0.0281499902 0.1023809275" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fl_thigh_joint" type="revolute">
+    <origin xyz="0.054221 0 0" rpy="0 0 0" />
+    <parent link="fl_hip_Link" />
+    <child link="fl_thigh_Link" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.15" upper="1.25" effort="7" velocity="42.93509959906051" />
+  </joint>
+  <link name="fl_calf_Link">
+    <inertial>
+      <origin xyz="0.1147775508571532 -3.925585585873304e-06 -0.03026169600044362" rpy="0 0 0" />
+      <mass value="0.2302904588983836" />
+      <inertia ixx="0.0001656996699131667" ixy="6.09740995677248e-08" ixz="0.000374937815516241" iyy="0.001346570398158975" iyz="-5.755049614855411e-09" izz="0.00119852965401651" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/fl_calf_Link.STL" />
+      </geometry>
+      <material name="v67_fl_calf_Link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <collision name="knee_end">
+      <origin xyz="-0.002 0 0.002" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.0272843267" length="0.0145" />
+      </geometry>
+    </collision>
+    <collision name="calf_shaft">
+      <origin xyz="0.0807807511 1.862645149e-09 -0.01579912391" rpy="0 -1.400626725 0" />
+      <geometry>
+        <box size="0.03034752887 0.03260646558 0.1372543562" />
+      </geometry>
+    </collision>
+    <collision name="calf_ankle">
+      <origin xyz="0.1735639237 1.862645149e-09 -0.05430005779" rpy="0 -1.095194106 0" />
+      <geometry>
+        <box size="0.04865639571 0.04179452157 0.09094059094" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fl_calf_joint" type="revolute">
+    <origin xyz="-0.20622 0.09345 0" rpy="0 0 0" />
+    <parent link="fl_thigh_Link" />
+    <child link="fl_calf_Link" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-2.1" upper="-0.4" effort="14" velocity="21.467549799530254" />
+  </joint>
+  <link name="fl_foot_Link">
+    <inertial>
+      <origin xyz="0.022567451390739 -1.675570542264415e-05 -4.459926176979961e-05" rpy="0 0 0" />
+      <mass value="0.09867470155176498" />
+      <inertia ixx="3.825644806759067e-05" ixy="-1.160222976061458e-08" ixz="-4.675109334139966e-08" iyy="3.767577743426419e-05" iyz="-7.462012269413994e-09" izz="2.862901454592415e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/fl_foot_Link.STL" />
+      </geometry>
+      <material name="v67_fl_foot_Link">
+        <color rgba="0.09411764705882353 0.12941176470588237 0.1568627450980392 1" />
+      </material>
+    </visual>
+    <collision name="foot_contact">
+      <origin xyz="0.01658312383 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fl_foot_joint" type="fixed">
+    <origin xyz="0.193 0 -0.065485" rpy="0 0.89994 0" />
+    <parent link="fl_calf_Link" />
+    <child link="fl_foot_Link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="rr_hip_Link">
+    <inertial>
+      <origin xyz="-0.05183718184706126 0.0198139834780054 2.861355633907928e-09" rpy="0 0 0" />
+      <mass value="0.4651299408768717" />
+      <inertia ixx="0.0002846905300104954" ixy="2.199235631648146e-05" ixz="-4.987884484883487e-11" iyy="0.0004210597194331014" iyz="1.843797867027122e-11" izz="0.0003349082862322541" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/rr_hip_Link.STL" />
+      </geometry>
+      <material name="v67_rr_hip_Link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <collision name="hip_housing">
+      <origin xyz="-0.0542211422 0.009 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.0402" length="0.073" />
+      </geometry>
+    </collision>
+    <collision name="hip_neck">
+      <origin xyz="-0.01286830852 0 -0.0003145383671" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02673661681 0.0559999997 0.0571082419" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rr_hip_joint" type="revolute">
+    <origin xyz="-0.13 -0.058 0.06" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="rr_hip_Link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.3" upper="0.3" effort="7" velocity="42.93509959906051" />
+  </joint>
+  <link name="rr_thigh_Link">
+    <inertial>
+      <origin xyz="-0.02922473936667003 -0.05615068558734702 0.003274211758214837" rpy="0 0 0" />
+      <mass value="1.127515571031291" />
+      <inertia ixx="0.001568100097910993" ixy="-0.00122248130106477" ixz="0.0003086748513312178" iyy="0.00493912389673858" iyz="0.0001375236857460178" izz="0.005589577636942082" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/rr_thigh_Link.STL" />
+      </geometry>
+      <material name="v67_rr_thigh_Link">
+        <color rgba="0.7137254901960784 0.7529411764705882 0.7803921568627451 1" />
+      </material>
+    </visual>
+    <collision name="thigh_housing">
+      <origin xyz="0 -0.05225 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.1045" />
+      </geometry>
+    </collision>
+    <collision name="thigh_distal">
+      <origin xyz="-0.1738674546 -0.09334500134 0.0137600884" rpy="0 -0.1745329252 0" />
+      <geometry>
+        <box size="0.1068535123 0.03679001129 0.04876928548" />
+      </geometry>
+    </collision>
+    <collision name="thigh_proximal">
+      <origin xyz="-0.07168729681 -0.09070000052 0.01963903611" rpy="0 -1.335176878 0" />
+      <geometry>
+        <box size="0.06459318809 0.0281499902 0.1023809275" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rr_thigh_joint" type="revolute">
+    <origin xyz="-0.054221 0 0" rpy="0 0 0" />
+    <parent link="rr_hip_Link" />
+    <child link="rr_thigh_Link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.25" upper="0.15" effort="7" velocity="42.93509959906051" />
+  </joint>
+  <link name="rr_calf_Link">
+    <inertial>
+      <origin xyz="0.1147775498029019 -3.925585586012081e-06 -0.03026169999904235" rpy="0 0 0" />
+      <mass value="0.2302904588983837" />
+      <inertia ixx="0.00016569969603719" ixy="6.097409936807108e-08" ixz="0.0003749378514977711" iyy="0.001346570398158975" iyz="-5.755051739435138e-09" izz="0.001198529627892487" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/rr_calf_Link.STL" />
+      </geometry>
+      <material name="v67_rr_calf_Link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <collision name="knee_end">
+      <origin xyz="-0.002 0 0.002" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.0272843267" length="0.0145" />
+      </geometry>
+    </collision>
+    <collision name="calf_shaft">
+      <origin xyz="0.0807807511 1.862645149e-09 -0.01579912391" rpy="0 -1.400626725 0" />
+      <geometry>
+        <box size="0.03034752887 0.03260646558 0.1372543562" />
+      </geometry>
+    </collision>
+    <collision name="calf_ankle">
+      <origin xyz="0.1735639237 1.862645149e-09 -0.05430005779" rpy="0 -1.095194106 0" />
+      <geometry>
+        <box size="0.04865639571 0.04179452157 0.09094059094" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rr_calf_joint" type="revolute">
+    <origin xyz="-0.20622 -0.09345 0" rpy="0 0 0" />
+    <parent link="rr_thigh_Link" />
+    <child link="rr_calf_Link" />
+    <axis xyz="0 1 0" />
+    <limit lower="0.4" upper="2.1" effort="14" velocity="21.467549799530254" />
+  </joint>
+  <link name="rr_foot_Link">
+    <inertial>
+      <origin xyz="0.02256745139073885 -1.675570542616911e-05 -4.293009799316572e-05" rpy="0 0 0" />
+      <mass value="0.09867470155176496" />
+      <inertia ixx="3.825644806759067e-05" ixy="-1.160222976061495e-08" ixz="-4.675109334140135e-08" iyy="3.767577743426418e-05" iyz="-7.462012269413104e-09" izz="2.862901454592416e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/rr_foot_Link.STL" />
+      </geometry>
+      <material name="v67_rr_foot_Link">
+        <color rgba="0.09411764705882353 0.12941176470588237 0.1568627450980392 1" />
+      </material>
+    </visual>
+    <collision name="foot_contact">
+      <origin xyz="0.01658312383 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rr_foot_joint" type="fixed">
+    <origin xyz="0.193 0 -0.065485" rpy="0 0.89994 0" />
+    <parent link="rr_calf_Link" />
+    <child link="rr_foot_Link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="rl_hip_Link">
+    <inertial>
+      <origin xyz="-0.05183718184706126 -0.01981398347800539 -2.861355642360205e-09" rpy="0 0 0" />
+      <mass value="0.4651299408768716" />
+      <inertia ixx="0.0002846905300104954" ixy="-2.199235631648149e-05" ixz="4.987884484104573e-11" iyy="0.0004210597194331014" iyz="1.843797866613891e-11" izz="0.0003349082862322541" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/rl_hip_Link.STL" />
+      </geometry>
+      <material name="v67_rl_hip_Link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <collision name="hip_housing">
+      <origin xyz="-0.0542211422 -0.009 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.0402" length="0.073" />
+      </geometry>
+    </collision>
+    <collision name="hip_neck">
+      <origin xyz="-0.01286830852 -0 -0.0003145383671" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02673661681 0.0559999997 0.0571082419" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rl_hip_joint" type="revolute">
+    <origin xyz="-0.13 0.058 0.06" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="rl_hip_Link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.3" upper="0.3" effort="7" velocity="42.93509959906051" />
+  </joint>
+  <link name="rl_thigh_Link">
+    <inertial>
+      <origin xyz="-0.02922475395578633 0.05615063525326673 0.003274188524770802" rpy="0 0 0" />
+      <mass value="1.127513998286581" />
+      <inertia ixx="0.001568096385176441" ixy="0.001222480642604129" ixz="0.0003086744465338087" iyy="0.00493912246990592" iyz="-0.000137522791075893" izz="0.005589574816425254" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/rl_thigh_Link.STL" />
+      </geometry>
+      <material name="v67_rl_thigh_Link">
+        <color rgba="0.7137254901960784 0.7529411764705882 0.7803921568627451 1" />
+      </material>
+    </visual>
+    <collision name="thigh_housing">
+      <origin xyz="0 0.05225 0" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.1045" />
+      </geometry>
+    </collision>
+    <collision name="thigh_distal">
+      <origin xyz="-0.1738674546 0.09334500134 0.0137600884" rpy="0 -0.1745329252 0" />
+      <geometry>
+        <box size="0.1068535123 0.03679001129 0.04876928548" />
+      </geometry>
+    </collision>
+    <collision name="thigh_proximal">
+      <origin xyz="-0.07168729681 0.09070000052 0.01963903611" rpy="0 -1.335176878 0" />
+      <geometry>
+        <box size="0.06459318809 0.0281499902 0.1023809275" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rl_thigh_joint" type="revolute">
+    <origin xyz="-0.054221 0 0" rpy="0 0 0" />
+    <parent link="rl_hip_Link" />
+    <child link="rl_thigh_Link" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.15" upper="1.25" effort="7" velocity="42.93509959906051" />
+  </joint>
+  <link name="rl_calf_Link">
+    <inertial>
+      <origin xyz="0.1147775498128596 -3.925585585901059e-06 -0.0302616999612763" rpy="0 0 0" />
+      <mass value="0.2302904588983836" />
+      <inertia ixx="0.0001656996957904409" ixy="6.097409936927186e-08" ixz="0.0003749378511579149" iyy="0.001346570398158975" iyz="-5.75505171913801e-09" izz="0.001198529628139235" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/rl_calf_Link.STL" />
+      </geometry>
+      <material name="v67_rl_calf_Link">
+        <color rgba="0.34901960784313724 0.39215686274509803 0.4235294117647059 1" />
+      </material>
+    </visual>
+    <collision name="knee_end">
+      <origin xyz="-0.002 0 0.002" rpy="1.570796327 0 0" />
+      <geometry>
+        <cylinder radius="0.0272843267" length="0.0145" />
+      </geometry>
+    </collision>
+    <collision name="calf_shaft">
+      <origin xyz="0.0807807511 1.862645149e-09 -0.01579912391" rpy="0 -1.400626725 0" />
+      <geometry>
+        <box size="0.03034752887 0.03260646558 0.1372543562" />
+      </geometry>
+    </collision>
+    <collision name="calf_ankle">
+      <origin xyz="0.1735639237 1.862645149e-09 -0.05430005779" rpy="0 -1.095194106 0" />
+      <geometry>
+        <box size="0.04865639571 0.04179452157 0.09094059094" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rl_calf_joint" type="revolute">
+    <origin xyz="-0.20622 0.09345 0" rpy="0 0 0" />
+    <parent link="rl_thigh_Link" />
+    <child link="rl_calf_Link" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-2.1" upper="-0.4" effort="14" velocity="21.467549799530254" />
+  </joint>
+  <link name="rl_foot_Link">
+    <inertial>
+      <origin xyz="0.02256745139073885 -1.675570542541971e-05 -4.293009799344327e-05" rpy="0 0 0" />
+      <mass value="0.09867470155176497" />
+      <inertia ixx="3.825644806759069e-05" ixy="-1.160222976061933e-08" ixz="-4.675109334140305e-08" iyy="3.767577743426418e-05" iyz="-7.462012269412621e-09" izz="2.862901454592416e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/rl_foot_Link.STL" />
+      </geometry>
+      <material name="v67_rl_foot_Link">
+        <color rgba="0.09411764705882353 0.12941176470588237 0.1568627450980392 1" />
+      </material>
+    </visual>
+    <collision name="foot_contact">
+      <origin xyz="0.01658312383 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rl_foot_joint" type="fixed">
+    <origin xyz="0.193 0 -0.065485" rpy="0 0.89994 0" />
+    <parent link="rl_calf_Link" />
+    <child link="rl_foot_Link" />
+    <axis xyz="0 0 0" />
+  </joint>
+</robot>

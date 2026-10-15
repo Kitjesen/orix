@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.STL binary linguist-generated=true
+*.stl binary linguist-generated=true
+*.STEP binary linguist-generated=true
+*.step binary linguist-generated=true
+*.SLDPRT binary
+*.SLDASM binary
+*.png binary
+*.jpg binary
+*.mp4 binary
+training/IsaacLab/** linguist-vendored=true
+training/runtime/source/rsl_rl/** linguist-vendored=true

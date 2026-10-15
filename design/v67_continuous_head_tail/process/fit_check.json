@@ -1,0 +1,50 @@
+{
+  "scope": "changed integrated upper cover and widened rear head against native frame/retained body and 588 front/rear leg samples; provisional joint limits; unchanged relative head pairs skipped; no continuous sweep, dynamics, cable or stiffness qualification",
+  "pose_count": 588,
+  "unique_link_transforms": 1400,
+  "mesh_static_contact_candidates": [
+    [
+      "head_lower",
+      "head_frame_bridge"
+    ],
+    [
+      "head_lower",
+      "head_screw_M3x20_1"
+    ],
+    [
+      "head_lower",
+      "head_screw_M3x20_2"
+    ],
+    [
+      "head_lower",
+      "head_screw_M3x20_3"
+    ],
+    [
+      "head_lower",
+      "head_screw_M3x20_4"
+    ]
+  ],
+  "mesh_fastener_contact_candidates": [],
+  "leg_contacts": [],
+  "integrity": [
+    {
+      "name": "body_upper",
+      "watertight": true,
+      "single_solid": true,
+      "positive_volume": true
+    },
+    {
+      "name": "head_upper",
+      "watertight": true,
+      "single_solid": true,
+      "positive_volume": true
+    },
+    {
+      "name": "head_lower",
+      "watertight": true,
+      "single_solid": true,
+      "positive_volume": true
+    }
+  ],
+  "head_pose": "unchanged from V63"
+}

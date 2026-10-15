@@ -1,0 +1,157 @@
+{
+  "reopened": true,
+  "components": [
+    {
+      "name": "mount_R_rear_lower-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_rear_lower.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "mount_R_front_lower-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_front_lower.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "mount_R_front_upper-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_front_upper.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "mount_R_rear_upper-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_R_rear_upper.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_screw_M3x20_1-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_1.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_nut_M3_envelope_3-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_3.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_frame_bridge-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_frame_bridge.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_nut_M3_envelope_2-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_2.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_nut_M3_envelope_4-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_4.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_nut_M3_envelope_1-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_nut_M3_envelope_1.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_screw_M3x20_2-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_2.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_screw_M3x20_3-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_3.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_screw_M3x20_4-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_4.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "frame_reference-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\frame_reference.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "body_left-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_left.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "body_right-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_right.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_lower-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_lower.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "black_visor-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\black_visor.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "body_upper-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_upper.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "body_lower-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_lower.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_upper-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_upper.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "head_face-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_face.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "ear_left-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\ear_left.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "body_front_panel-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_front_panel.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "body_rear_panel-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\body_rear_panel.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "mount_L_rear_lower-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_rear_lower.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "mount_L_front_lower-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_front_lower.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "ear_right-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\ear_right.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "mount_L_rear_upper-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_rear_upper.SLDPRT",
+      "suppressed": false
+    },
+    {
+      "name": "mount_L_front_upper-1",
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\mount_L_front_upper.SLDPRT",
+      "suppressed": false
+    }
+  ],
+  "component_count": 30,
+  "mates": "intentional fixed placement; head articulation removed"
+}

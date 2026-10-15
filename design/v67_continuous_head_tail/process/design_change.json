@@ -1,0 +1,15 @@
+{
+  "changed_parts": [
+    "body_upper",
+    "head_upper",
+    "head_lower"
+  ],
+  "removed_part": "body_tail_cap",
+  "head_rear_half_widths_mm": [
+    66,
+    60
+  ],
+  "head_crown_and_face_pose": "unchanged",
+  "tail": "continuous roof and tail in one part; rear service panel retained",
+  "limitations": "sampling-based contour matching, not certified G1/G2; head-shell assembly clearances need checking"
+}

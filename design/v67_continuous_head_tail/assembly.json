@@ -1,0 +1,1075 @@
+{
+  "version": "V67 continuous upper tail and widened rear head",
+  "units": "mm",
+  "frame": "base_link",
+  "parameters": {
+    "units": "mm",
+    "frame": "unchanged base_link",
+    "body_rows": [
+      [
+        -169,
+        87,
+        -5.3,
+        132
+      ],
+      [
+        -151,
+        99,
+        -5.3,
+        134
+      ],
+      [
+        -136,
+        114,
+        -5.3,
+        135
+      ],
+      [
+        -112,
+        114,
+        -5.3,
+        134
+      ],
+      [
+        -75,
+        113,
+        -5.3,
+        129.5
+      ],
+      [
+        -35,
+        112,
+        -5.3,
+        127.5
+      ],
+      [
+        10,
+        111.5,
+        -5.3,
+        127
+      ],
+      [
+        55,
+        112,
+        -5.3,
+        127.5
+      ],
+      [
+        95,
+        114,
+        -5.3,
+        131.5
+      ],
+      [
+        122,
+        114,
+        -5.3,
+        134
+      ],
+      [
+        131,
+        112,
+        -5.3,
+        133
+      ],
+      [
+        145,
+        88,
+        10,
+        132
+      ]
+    ],
+    "tail_method": "integrated with body upper cover; rear panel remains detachable",
+    "hip_relief_radius_mm": 58.7,
+    "hip_relief_x_start_mm": 126.5,
+    "body_lower_section_exponent": 14,
+    "end_bay_center_relief_z_mm": [
+      1.3,
+      118.7
+    ],
+    "rear_foot_pocket": {
+      "axis": "+X",
+      "center_abs_y_z_mm": [
+        140,
+        -25
+      ],
+      "outer_radius_mm": 44.5,
+      "inner_radius_mm": 46.5,
+      "outer_x_mm": [
+        -145,
+        -95
+      ],
+      "inner_x_mm": [
+        -145,
+        -93
+      ],
+      "nominal_wall_mm": 2
+    },
+    "body_nominal_section_offset_mm": 3,
+    "upper_seam_rows": [
+      [
+        -160,
+        126
+      ],
+      [
+        -125,
+        124
+      ],
+      [
+        -85,
+        114
+      ],
+      [
+        -35,
+        106
+      ],
+      [
+        30,
+        105
+      ],
+      [
+        75,
+        111
+      ],
+      [
+        115,
+        123
+      ],
+      [
+        160,
+        133
+      ]
+    ],
+    "lower_seam_rows": [
+      [
+        -175,
+        20
+      ],
+      [
+        -125,
+        17
+      ],
+      [
+        -60,
+        12
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        60,
+        12
+      ],
+      [
+        125,
+        20
+      ],
+      [
+        175,
+        25
+      ]
+    ],
+    "status": "native fixed-head fit prototype; cover fasteners, wiring and structural qualification pending",
+    "inherited_masters": "V62 head native solids translated 12 mm downward; rebuilt upper cover and mounting bridge",
+    "body_upper_section_exponent": 9,
+    "retained_frame_height_mm": 120,
+    "side_waist": {
+      "maximum_inset_mm": 8.0,
+      "longitudinal_stations_mm": [
+        -112,
+        -35,
+        35,
+        122
+      ],
+      "belt_centre_z_mm": 60,
+      "belt_scale_mm": 32,
+      "belt_exponent": 4,
+      "side_weight_exponent": 6,
+      "longitudinal_blend": "quintic smoothstep with a constant central section"
+    },
+    "body_length_target_mm": 296,
+    "body_maximum_width_target_mm": 228,
+    "centre_body_height_target_mm": 132.4,
+    "centre_roof_drop_from_v39_mm": 2,
+    "centre_floor_raise_from_v39_mm": 1.7,
+    "retained_frame_size_mm": [
+      260,
+      200,
+      120
+    ],
+    "body_roof_and_floor_rows": "reduced around the measured original frame sections",
+    "head_volume_source_revision": "V39; do not inherit the V40 global head reduction",
+    "section_offset_method": "3 mm inward section normal after outer waist deformation",
+    "minimum_sectional_clearance_target_mm": 1.5,
+    "revision": "V67",
+    "source_revision": "V66",
+    "changed_parts": [
+      "body_upper",
+      "head_upper",
+      "head_lower"
+    ],
+    "retained_motor_axes": true,
+    "purpose": "taper rear cap toward trailing edge; same-scale orthographic review and CMF",
+    "retained_v42_part": [
+      "body_tail_cap"
+    ],
+    "removed_v42_trial_parts": [
+      "body_front_sternum",
+      "body_rear_spine"
+    ],
+    "head_shell_scale": 1.0,
+    "end_panel_x_slabs_mm": [
+      [
+        131.5,
+        134.5
+      ],
+      [
+        -134.5,
+        -131.5
+      ]
+    ],
+    "end_panel_motor_port_radius_mm": 31.0,
+    "motor_root_measured_radial_bound_mm": 27.541,
+    "end_panel_section_inset_mm": 4.5,
+    "interface": "four vertical M3 clearance holes onto a frame-mounted low bridge",
+    "interface_base_z_mm": [
+      110,
+      113
+    ],
+    "moving_head_saddle": false,
+    "fixed_to_collar_nominal_axial_gap_mm": 1,
+    "head_mode": "fixed detachable",
+    "head_translation_from_v60_mm": [
+      -4,
+      0,
+      -24
+    ],
+    "head_scale": 1.0,
+    "head_body_x_seam_mm": 1.0,
+    "yaw_axis_xyz_mm": [
+      0,
+      0,
+      0
+    ],
+    "pitch_axis_xyz_mm": [
+      0,
+      0,
+      0
+    ],
+    "yaw_target_deg": [
+      0,
+      0
+    ],
+    "pitch_target_deg": [
+      0,
+      0
+    ],
+    "removed_neck_parts": [
+      "neck_fixed_cover",
+      "pitch_actuator_trial",
+      "pitch_head_cradle_trial",
+      "yaw_actuator_trial",
+      "yaw_bearing_collar",
+      "yaw_pitch_yoke_trial"
+    ],
+    "old_neck_slot": "closed; low beam passage retained",
+    "head_pose": "unchanged low fixed detachable head; face, ear and mount centers retained",
+    "head_translation_from_v62_mm": [
+      0,
+      0,
+      -12
+    ],
+    "transition_method": "smooth fitted rear-head roof envelope over elongated front shoulder",
+    "head_translation_from_v63_mm": [
+      0,
+      0,
+      0
+    ],
+    "exposed_rear_seat_half_width_mm": 18,
+    "removed_parts": [
+      "body_tail_cap"
+    ],
+    "head_method": "rear upper/lower half-widths 66/60 mm; broadened front shoulder follows head rear roof",
+    "tail_root_seam_mm": 0,
+    "head_rows": [
+      [
+        146.0,
+        66.0,
+        60.0,
+        118.0,
+        171.0
+      ],
+      [
+        156.0,
+        69.0,
+        63.0,
+        116.0,
+        178.0
+      ],
+      [
+        178.0,
+        74.0,
+        67.0,
+        114.0,
+        185.0
+      ],
+      [
+        205.0,
+        78.0,
+        72.0,
+        111.0,
+        189.0
+      ],
+      [
+        230.0,
+        77.5,
+        74.0,
+        108.0,
+        192.0
+      ],
+      [
+        248.0,
+        76.0,
+        75.0,
+        105.0,
+        193.0
+      ],
+      [
+        258.0,
+        74.0,
+        74.0,
+        106.0,
+        191.0
+      ]
+    ]
+  },
+  "parts": [
+    {
+      "name": "body_upper",
+      "label": "收腰低背上盖",
+      "category": "body_shell",
+      "kinematic_group": "fixed",
+      "color": "#b4bec9",
+      "mesh": "meshes/body_upper.stl",
+      "cad": "cad/body_upper.SLDPRT",
+      "bounds_mm": [
+        [
+          -140.00000059604645,
+          -112.2937947511673,
+          104.89712655544281
+        ],
+        [
+          144.99999582767487,
+          112.29101568460464,
+          170.33454775810242
+        ]
+      ],
+      "volume_mm3": 230649.49654966305,
+      "mass_kg_assumed_PETG": 0.2212514693962348,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.2929248606180721
+    },
+    {
+      "name": "body_right",
+      "label": "连续曲线侧壳",
+      "category": "body_shell",
+      "kinematic_group": "fixed",
+      "color": "#b4bec9",
+      "mesh": "meshes/body_right.stl",
+      "cad": "cad/body_right.SLDPRT",
+      "bounds_mm": [
+        [
+          -136.00000739097595,
+          -116.9070154428482,
+          10.584183968603611
+        ],
+        [
+          144.99999582767487,
+          -24.000000208616257,
+          130.08539378643036
+        ]
+      ],
+      "volume_mm3": 82153.18663336021,
+      "mass_kg_assumed_PETG": 0.10433454702436745,
+      "status": "native mounting geometry; fastener seating pending"
+    },
+    {
+      "name": "body_left",
+      "label": "连续曲线侧壳",
+      "category": "body_shell",
+      "kinematic_group": "fixed",
+      "color": "#b4bec9",
+      "mesh": "meshes/body_left.stl",
+      "cad": "cad/body_left.SLDPRT",
+      "bounds_mm": [
+        [
+          -136.00000739097595,
+          24.000000208616257,
+          10.586350224912167
+        ],
+        [
+          144.99999582767487,
+          116.90706014633179,
+          130.08540868759155
+        ]
+      ],
+      "volume_mm3": 82201.44142096302,
+      "mass_kg_assumed_PETG": 0.10439583060462303,
+      "status": "native mounting geometry; fastener seating pending"
+    },
+    {
+      "name": "body_lower",
+      "label": "窄边曲线底壳",
+      "category": "body_shell",
+      "kinematic_group": "fixed",
+      "color": "#3f4850",
+      "mesh": "meshes/body_lower.stl",
+      "cad": "cad/body_lower.SLDPRT",
+      "bounds_mm": [
+        [
+          -136.00000739097595,
+          -116.7849600315094,
+          -5.767200607806444
+        ],
+        [
+          143.00814270973206,
+          116.75172299146652,
+          21.704474464058876
+        ]
+      ],
+      "volume_mm3": 201090.45078654872,
+      "mass_kg_assumed_PETG": 0.25538487249891684
+    },
+    {
+      "name": "head_upper",
+      "cad": "cad/head_upper.SLDPRT",
+      "mesh": "meshes/head_upper.stl",
+      "kinematic_group": "fixed",
+      "category": "head_shell",
+      "color": "#b4bec9",
+      "bounds_mm": [
+        [
+          145.9999978542328,
+          -76.6228586435318,
+          141.2999927997589
+        ],
+        [
+          253.3000111579895,
+          76.62322372198105,
+          193.01433861255646
+        ]
+      ],
+      "volume_mm3": 90534.08572148516,
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.11497828886628615,
+      "status": "native fit prototype; fastener procurement and structural qualification pending"
+    },
+    {
+      "name": "head_lower",
+      "cad": "cad/head_lower.SLDPRT",
+      "mesh": "meshes/head_lower.stl",
+      "kinematic_group": "fixed",
+      "category": "head_shell",
+      "color": "#b4bec9",
+      "bounds_mm": [
+        [
+          145.9999978542328,
+          -76.02588087320328,
+          105.0819382071495
+        ],
+        [
+          253.3000111579895,
+          76.02864503860474,
+          140.79999923706055
+        ]
+      ],
+      "volume_mm3": 84854.42474146925,
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.10776511942166596,
+      "status": "native fit prototype; fastener procurement and structural qualification pending"
+    },
+    {
+      "name": "head_face",
+      "cad": "cad/head_face.SLDPRT",
+      "mesh": "meshes/head_face.stl",
+      "kinematic_group": "fixed",
+      "category": "head_shell",
+      "color": "#b4bec9",
+      "bounds_mm": [
+        [
+          253.80000472068787,
+          -74.24327731132507,
+          105.43504357337952
+        ],
+        [
+          257.999986410141,
+          74.2112249135971,
+          191.74110889434814
+        ]
+      ],
+      "volume_mm3": 6027.1794682026375,
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.007654517924617351,
+      "status": "native fit prototype; fastener procurement and structural qualification pending"
+    },
+    {
+      "name": "black_visor",
+      "cad": "cad/black_visor.SLDPRT",
+      "mesh": "meshes/black_visor.stl",
+      "kinematic_group": "fixed",
+      "category": "optical",
+      "color": "#080f15",
+      "bounds_mm": [
+        [
+          257.60000944137573,
+          -69.67974454164505,
+          109.74343866109848
+        ],
+        [
+          259.0999901294708,
+          69.64948773384094,
+          187.06583976745605
+        ]
+      ],
+      "volume_mm3": 14633.463791280976,
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.018584499014926842,
+      "status": "native fit prototype; fastener procurement and structural qualification pending"
+    },
+    {
+      "name": "ear_right",
+      "cad": "cad/ear_right.SLDPRT",
+      "mesh": "meshes/ear_right.stl",
+      "kinematic_group": "fixed",
+      "category": "ear_shell",
+      "color": "#b4bec9",
+      "bounds_mm": [
+        [
+          152.15477347373962,
+          -86.0000029206276,
+          150.49999952316284
+        ],
+        [
+          191.444531083107,
+          -61.99999898672104,
+          214.33086693286896
+        ]
+      ],
+      "volume_mm3": 17266.251639625963,
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.021928139582324976,
+      "status": "native fit prototype; fastener procurement and structural qualification pending"
+    },
+    {
+      "name": "ear_left",
+      "cad": "cad/ear_left.SLDPRT",
+      "mesh": "meshes/ear_left.stl",
+      "kinematic_group": "fixed",
+      "category": "ear_shell",
+      "color": "#b4bec9",
+      "bounds_mm": [
+        [
+          152.15477347373962,
+          61.99999898672104,
+          150.49999952316284
+        ],
+        [
+          191.444531083107,
+          86.0000029206276,
+          214.33086693286896
+        ]
+      ],
+      "volume_mm3": 17266.5968689327,
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.021928578023544528,
+      "status": "native fit prototype; fastener procurement and structural qualification pending"
+    },
+    {
+      "name": "body_front_panel",
+      "cad": "cad/body_front_panel.SLDPRT",
+      "mesh": "meshes/body_front_panel.stl",
+      "category": "body_shell",
+      "kinematic_group": "fixed",
+      "color": "#b4bec9",
+      "bounds_mm": [
+        [
+          131.5000057220459,
+          -106.77977651357651,
+          -0.25855243438854814
+        ],
+        [
+          134.49999690055847,
+          106.75569623708725,
+          128.46429646015167
+        ]
+      ],
+      "volume_mm3": 59115.66283925786,
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.07507689180585748,
+      "status": "native geometric prototype; mounting details provisional"
+    },
+    {
+      "name": "body_rear_panel",
+      "cad": "cad/body_rear_panel.SLDPRT",
+      "mesh": "meshes/body_rear_panel.stl",
+      "category": "body_shell",
+      "kinematic_group": "fixed",
+      "color": "#b4bec9",
+      "bounds_mm": [
+        [
+          -134.49999690055847,
+          -109.52258855104446,
+          10.999999940395355
+        ],
+        [
+          -131.5000057220459,
+          109.50559377670288,
+          121.50000035762787
+        ]
+      ],
+      "volume_mm3": 54475.627497696005,
+      "density_assumption_kg_m3": 1270,
+      "estimated_solid_mass_kg": 0.06918404692207393,
+      "status": "native geometric prototype; mounting details provisional"
+    },
+    {
+      "label": "机架孔位转接片",
+      "category": "mounting_trial",
+      "kinematic_group": "fixed",
+      "color": "#69747d",
+      "density_assumption_kg_m3": 2700,
+      "name": "mount_L_rear_lower",
+      "mesh": "meshes/mount_L_rear_lower.stl",
+      "cad": "cad/mount_L_rear_lower.SLDPRT",
+      "bounds_mm": [
+        [
+          -46.00000008940697,
+          100.00000149011612,
+          1.500000013038516
+        ],
+        [
+          -34.00000184774399,
+          101.4999970793724,
+          41.00000113248825
+        ]
+      ],
+      "volume_mm3": 673.8884609985298,
+      "status": "native mounting geometry; fastener seating pending",
+      "estimated_solid_mass_kg": 0.0018194988446960307
+    },
+    {
+      "label": "机架孔位转接片",
+      "category": "mounting_trial",
+      "kinematic_group": "fixed",
+      "color": "#69747d",
+      "density_assumption_kg_m3": 2700,
+      "name": "mount_L_rear_upper",
+      "mesh": "meshes/mount_L_rear_upper.stl",
+      "cad": "cad/mount_L_rear_upper.SLDPRT",
+      "bounds_mm": [
+        [
+          -46.00000008940697,
+          100.00000149011612,
+          79.00000363588333
+        ],
+        [
+          -34.00000184774399,
+          101.4999970793724,
+          118.5000017285347
+        ]
+      ],
+      "volume_mm3": 673.8884117202473,
+      "status": "native mounting geometry; fastener seating pending",
+      "estimated_solid_mass_kg": 0.0018194987116446678
+    },
+    {
+      "label": "机架孔位转接片",
+      "category": "mounting_trial",
+      "kinematic_group": "fixed",
+      "color": "#69747d",
+      "density_assumption_kg_m3": 2700,
+      "name": "mount_L_front_lower",
+      "mesh": "meshes/mount_L_front_lower.stl",
+      "cad": "cad/mount_L_front_lower.SLDPRT",
+      "bounds_mm": [
+        [
+          34.00000184774399,
+          100.00000149011612,
+          1.500000013038516
+        ],
+        [
+          46.00000008940697,
+          101.4999970793724,
+          39.000000804662704
+        ]
+      ],
+      "volume_mm3": 637.8775106132356,
+      "status": "native mounting geometry; fastener seating pending",
+      "free_end_margin_mm": 4,
+      "estimated_solid_mass_kg": 0.001722269278655736
+    },
+    {
+      "label": "机架孔位转接片",
+      "category": "mounting_trial",
+      "kinematic_group": "fixed",
+      "color": "#69747d",
+      "density_assumption_kg_m3": 2700,
+      "name": "mount_L_front_upper",
+      "mesh": "meshes/mount_L_front_upper.stl",
+      "cad": "cad/mount_L_front_upper.SLDPRT",
+      "bounds_mm": [
+        [
+          34.00000184774399,
+          100.00000149011612,
+          81.00000023841858
+        ],
+        [
+          46.00000008940697,
+          101.4999970793724,
+          118.5000017285347
+        ]
+      ],
+      "volume_mm3": 637.8775156232923,
+      "status": "native mounting geometry; fastener seating pending",
+      "free_end_margin_mm": 4,
+      "estimated_solid_mass_kg": 0.0017222692921828894
+    },
+    {
+      "label": "机架孔位转接片",
+      "category": "mounting_trial",
+      "kinematic_group": "fixed",
+      "color": "#69747d",
+      "density_assumption_kg_m3": 2700,
+      "name": "mount_R_rear_lower",
+      "mesh": "meshes/mount_R_rear_lower.stl",
+      "cad": "cad/mount_R_rear_lower.SLDPRT",
+      "bounds_mm": [
+        [
+          -46.00000008940697,
+          -101.4999970793724,
+          1.500000013038516
+        ],
+        [
+          -34.00000184774399,
+          -100.00000149011612,
+          41.00000113248825
+        ]
+      ],
+      "volume_mm3": 673.8884613997267,
+      "status": "native mounting geometry; fastener seating pending",
+      "estimated_solid_mass_kg": 0.001819498845779262
+    },
+    {
+      "label": "机架孔位转接片",
+      "category": "mounting_trial",
+      "kinematic_group": "fixed",
+      "color": "#69747d",
+      "density_assumption_kg_m3": 2700,
+      "name": "mount_R_rear_upper",
+      "mesh": "meshes/mount_R_rear_upper.stl",
+      "cad": "cad/mount_R_rear_upper.SLDPRT",
+      "bounds_mm": [
+        [
+          -46.00000008940697,
+          -101.4999970793724,
+          79.00000363588333
+        ],
+        [
+          -34.00000184774399,
+          -100.00000149011612,
+          118.5000017285347
+        ]
+      ],
+      "volume_mm3": 673.888418079628,
+      "status": "native mounting geometry; fastener seating pending",
+      "estimated_solid_mass_kg": 0.0018194987288149957
+    },
+    {
+      "label": "机架孔位转接片",
+      "category": "mounting_trial",
+      "kinematic_group": "fixed",
+      "color": "#69747d",
+      "density_assumption_kg_m3": 2700,
+      "name": "mount_R_front_lower",
+      "mesh": "meshes/mount_R_front_lower.stl",
+      "cad": "cad/mount_R_front_lower.SLDPRT",
+      "bounds_mm": [
+        [
+          34.00000184774399,
+          -101.4999970793724,
+          1.500000013038516
+        ],
+        [
+          46.00000008940697,
+          -100.00000149011612,
+          39.000000804662704
+        ]
+      ],
+      "volume_mm3": 637.8775106132356,
+      "status": "native mounting geometry; fastener seating pending",
+      "free_end_margin_mm": 4,
+      "estimated_solid_mass_kg": 0.001722269278655736
+    },
+    {
+      "label": "机架孔位转接片",
+      "category": "mounting_trial",
+      "kinematic_group": "fixed",
+      "color": "#69747d",
+      "density_assumption_kg_m3": 2700,
+      "name": "mount_R_front_upper",
+      "mesh": "meshes/mount_R_front_upper.stl",
+      "cad": "cad/mount_R_front_upper.SLDPRT",
+      "bounds_mm": [
+        [
+          34.00000184774399,
+          -101.4999970793724,
+          81.00000023841858
+        ],
+        [
+          46.00000008940697,
+          -100.00000149011612,
+          118.5000017285347
+        ]
+      ],
+      "volume_mm3": 637.8775156232923,
+      "status": "native mounting geometry; fastener seating pending",
+      "free_end_margin_mm": 4,
+      "estimated_solid_mass_kg": 0.0017222692921828894
+    },
+    {
+      "name": "head_frame_bridge",
+      "cad": "cad/head_frame_bridge.SLDPRT",
+      "mesh": "meshes/head_frame_bridge.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fixed_head_mount",
+      "bounds_mm": [
+        [
+          34.00000184774399,
+          -82.99999684095383,
+          104.99999672174454
+        ],
+        [
+          186.49999797344208,
+          82.99999684095383,
+          123.00000339746475
+        ]
+      ],
+      "volume_mm3": 25300.927492634994,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 2700,
+      "estimated_solid_mass_kg": 0.06831250423011449
+    },
+    {
+      "name": "head_screw_M3x20_1",
+      "cad": "cad/head_screw_M3x20_1.SLDPRT",
+      "mesh": "meshes/head_screw_M3x20_1.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fastener_envelope",
+      "bounds_mm": [
+        [
+          157.25000202655792,
+          -26.74798108637333,
+          107.00000077486038
+        ],
+        [
+          162.7500057220459,
+          -21.252017468214035,
+          129.99999523162842
+        ]
+      ],
+      "volume_mm3": 211.33996249566826,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 7850,
+      "estimated_solid_mass_kg": 0.0016590187055909957
+    },
+    {
+      "name": "head_nut_M3_envelope_1",
+      "cad": "cad/head_nut_M3_envelope_1.SLDPRT",
+      "mesh": "meshes/head_nut_M3_envelope_1.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fastener_envelope",
+      "bounds_mm": [
+        [
+          156.81999921798706,
+          -27.178604155778885,
+          107.60000348091125
+        ],
+        [
+          163.17999362945557,
+          -20.82139626145363,
+          109.99999940395355
+        ]
+      ],
+      "volume_mm3": 54.3716626277513,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 7850,
+      "estimated_solid_mass_kg": 0.00042681755162784775
+    },
+    {
+      "name": "head_screw_M3x20_2",
+      "cad": "cad/head_screw_M3x20_2.SLDPRT",
+      "mesh": "meshes/head_screw_M3x20_2.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fastener_envelope",
+      "bounds_mm": [
+        [
+          157.25000202655792,
+          21.252017468214035,
+          107.00000077486038
+        ],
+        [
+          162.7500057220459,
+          26.74798108637333,
+          129.99999523162842
+        ]
+      ],
+      "volume_mm3": 211.33996249566886,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 7850,
+      "estimated_solid_mass_kg": 0.0016590187055910007
+    },
+    {
+      "name": "head_nut_M3_envelope_2",
+      "cad": "cad/head_nut_M3_envelope_2.SLDPRT",
+      "mesh": "meshes/head_nut_M3_envelope_2.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fastener_envelope",
+      "bounds_mm": [
+        [
+          156.81999921798706,
+          20.82139626145363,
+          107.60000348091125
+        ],
+        [
+          163.17999362945557,
+          27.178604155778885,
+          109.99999940395355
+        ]
+      ],
+      "volume_mm3": 54.37166262775114,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 7850,
+      "estimated_solid_mass_kg": 0.0004268175516278465
+    },
+    {
+      "name": "head_screw_M3x20_3",
+      "cad": "cad/head_screw_M3x20_3.SLDPRT",
+      "mesh": "meshes/head_screw_M3x20_3.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fastener_envelope",
+      "bounds_mm": [
+        [
+          177.2499978542328,
+          -26.74798108637333,
+          107.00000077486038
+        ],
+        [
+          182.75000154972076,
+          -21.252017468214035,
+          129.99999523162842
+        ]
+      ],
+      "volume_mm3": 211.33972178049234,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 7850,
+      "estimated_solid_mass_kg": 0.001659016815976865
+    },
+    {
+      "name": "head_nut_M3_envelope_3",
+      "cad": "cad/head_nut_M3_envelope_3.SLDPRT",
+      "mesh": "meshes/head_nut_M3_envelope_3.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fastener_envelope",
+      "bounds_mm": [
+        [
+          176.81999504566193,
+          -27.178604155778885,
+          107.60000348091125
+        ],
+        [
+          183.18000435829163,
+          -20.82139626145363,
+          109.99999940395355
+        ]
+      ],
+      "volume_mm3": 54.371681215217905,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 7850,
+      "estimated_solid_mass_kg": 0.00042681769753946056
+    },
+    {
+      "name": "head_screw_M3x20_4",
+      "cad": "cad/head_screw_M3x20_4.SLDPRT",
+      "mesh": "meshes/head_screw_M3x20_4.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fastener_envelope",
+      "bounds_mm": [
+        [
+          177.2499978542328,
+          21.252017468214035,
+          107.00000077486038
+        ],
+        [
+          182.75000154972076,
+          26.74798108637333,
+          129.99999523162842
+        ]
+      ],
+      "volume_mm3": 211.33972178049112,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 7850,
+      "estimated_solid_mass_kg": 0.0016590168159768554
+    },
+    {
+      "name": "head_nut_M3_envelope_4",
+      "cad": "cad/head_nut_M3_envelope_4.SLDPRT",
+      "mesh": "meshes/head_nut_M3_envelope_4.stl",
+      "color": "#60717d",
+      "kinematic_group": "fixed",
+      "category": "fastener_envelope",
+      "bounds_mm": [
+        [
+          176.81999504566193,
+          20.82139626145363,
+          107.60000348091125
+        ],
+        [
+          183.18000435829163,
+          27.178604155778885,
+          109.99999940395355
+        ]
+      ],
+      "volume_mm3": 54.371681215217905,
+      "status": "native fit prototype; fastener procurement and structural qualification pending",
+      "density_assumption_kg_m3": 7850,
+      "estimated_solid_mass_kg": 0.00042681769753946056
+    }
+  ],
+  "assembly": "cad/SD-V67_continuous_head_tail.SLDASM",
+  "status": "native fit and appearance prototype",
+  "reference_frame_component": {
+    "cad": "cad/frame_reference.SLDPRT",
+    "translation_mm": [
+      130,
+      0,
+      60
+    ],
+    "source": "cad/solidworks/core/SD-C009_机身实体参考.SLDPRT"
+  },
+  "appearance_notes": {
+    "lower_side_paint_boundary_z_mm": 46,
+    "paint_is_preview_only": true,
+    "preserved_body_geometry": "V46; no global shortening or scaling",
+    "new_ear_geometry": "ear_shape.json"
+  }
+}

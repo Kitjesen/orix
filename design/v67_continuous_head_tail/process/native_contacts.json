@@ -1,0 +1,119 @@
+{
+  "controls": {
+    "separated": {
+      "error": 0,
+      "body_count": 0,
+      "volume_mm3": 0,
+      "intersection_bounds_mm": []
+    },
+    "tangent": {
+      "error": 0,
+      "body_count": 0,
+      "volume_mm3": 0,
+      "intersection_bounds_mm": []
+    },
+    "overlap": {
+      "error": 0,
+      "body_count": 1,
+      "volume_mm3": 0.5,
+      "intersection_bounds_mm": [
+        [
+          0.5,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "parts": [
+        "head_lower",
+        "head_frame_bridge"
+      ],
+      "error": 0,
+      "body_count": 0,
+      "volume_mm3": 0,
+      "intersection_bounds_mm": []
+    },
+    {
+      "parts": [
+        "head_lower",
+        "head_screw_M3x20_1"
+      ],
+      "error": 0,
+      "body_count": 0,
+      "volume_mm3": 0,
+      "intersection_bounds_mm": []
+    },
+    {
+      "parts": [
+        "head_lower",
+        "head_screw_M3x20_2"
+      ],
+      "error": 0,
+      "body_count": 0,
+      "volume_mm3": 0,
+      "intersection_bounds_mm": []
+    },
+    {
+      "parts": [
+        "head_lower",
+        "head_screw_M3x20_3"
+      ],
+      "error": 0,
+      "body_count": 0,
+      "volume_mm3": 0,
+      "intersection_bounds_mm": []
+    },
+    {
+      "parts": [
+        "head_lower",
+        "head_screw_M3x20_4"
+      ],
+      "error": 0,
+      "body_count": 0,
+      "volume_mm3": 0,
+      "intersection_bounds_mm": []
+    }
+  ],
+  "positive_intersections": [],
+  "unresolved": [],
+  "closing_snapshot": [
+    {
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_1.SLDPRT",
+      "title": "head_screw_M3x20_1",
+      "dirty": false
+    },
+    {
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_frame_bridge.SLDPRT",
+      "title": "head_frame_bridge",
+      "dirty": false
+    },
+    {
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_lower.SLDPRT",
+      "title": "head_lower",
+      "dirty": false
+    },
+    {
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_3.SLDPRT",
+      "title": "head_screw_M3x20_3",
+      "dirty": false
+    },
+    {
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_4.SLDPRT",
+      "title": "head_screw_M3x20_4",
+      "dirty": false
+    },
+    {
+      "path": "D:\\inovxio\\brain\\smalldog\\design\\v67_continuous_head_tail\\cad\\head_screw_M3x20_2.SLDPRT",
+      "title": "head_screw_M3x20_2",
+      "dirty": false
+    }
+  ],
+  "remaining_documents": [],
+  "user_instance_retained": 113280
+}

@@ -1,0 +1,146 @@
+{
+  "method": "manual image landmarks; least-squares perspective camera only; unchanged mechanical dimensions and standing joint angles",
+  "reference_image_size_px": [
+    1590,
+    989
+  ],
+  "parameters": [
+    -51.07809772190621,
+    19.330014474338345,
+    1.5252965619716061,
+    9818.477840658632,
+    767.72440182729,
+    377.9349433775551
+  ],
+  "parameter_names": [
+    "azimuth_deg",
+    "elevation_deg",
+    "scale_px_mm",
+    "camera_distance_mm",
+    "centre_u_px",
+    "centre_v_px"
+  ],
+  "landmarks": [
+    {
+      "label": "rr knee outer bolt",
+      "world_mm": [
+        -332.1541730358314,
+        -166.0,
+        -83.67485763191404
+      ],
+      "reference_px": [
+        224,
+        444
+      ],
+      "projection_px": [
+        220.21618180372593,
+        457.38373838733264
+      ],
+      "residual_px": 13.908333234540223
+    },
+    {
+      "label": "fr knee outer bolt",
+      "world_mm": [
+        36.28782696416863,
+        -166.0,
+        -83.67485763191404
+      ],
+      "reference_px": [
+        643,
+        581
+      ],
+      "projection_px": [
+        650.3283660523813,
+        577.4355944068396
+      ],
+      "residual_px": 8.149229180127854
+    },
+    {
+      "label": "fl knee outer bolt",
+      "world_mm": [
+        36.28782696416863,
+        166.0,
+        -83.67485763191404
+      ],
+      "reference_px": [
+        963,
+        473
+      ],
+      "projection_px": [
+        967.2593842890012,
+        443.81513689458416
+      ],
+      "residual_px": 29.494043280012548
+    },
+    {
+      "label": "rr foot visual centre",
+      "world_mm": [
+        -193.14346462488174,
+        -151.4500007033348,
+        -257.4967294931412
+      ],
+      "reference_px": [
+        398,
+        732
+      ],
+      "projection_px": [
+        396.73769945920776,
+        743.4811812017208
+      ],
+      "residual_px": 11.550364688702754
+    },
+    {
+      "label": "fr foot visual centre",
+      "world_mm": [
+        175.29688775539398,
+        -151.4500007033348,
+        -257.49699771404266
+      ],
+      "reference_px": [
+        837,
+        868
+      ],
+      "projection_px": [
+        831.4576488600702,
+        870.1587555818477
+      ],
+      "residual_px": 5.947930885647513
+    },
+    {
+      "label": "rl foot visual centre",
+      "world_mm": [
+        -193.14346462488174,
+        151.4500007033348,
+        -257.4967294931412
+      ],
+      "reference_px": [
+        657,
+        620
+      ],
+      "projection_px": [
+        686.2364275257607,
+        620.1282906585668
+      ],
+      "residual_px": 29.236708996775548
+    },
+    {
+      "label": "fl foot visual centre",
+      "world_mm": [
+        175.29688775539398,
+        151.4500007033348,
+        -257.49699771404266
+      ],
+      "reference_px": [
+        1144,
+        747
+      ],
+      "projection_px": [
+        1117.5828139042878,
+        741.2450301300445
+      ],
+      "residual_px": 27.036778643536366
+    }
+  ],
+  "rms_pixels": 20.29887969196016,
+  "limitation": "one generated image cannot determine unique 3D dimensions; landmark centre selections approximate"
+}

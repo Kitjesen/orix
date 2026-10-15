@@ -1,0 +1,96 @@
+{
+  "checked_at": "2026-10-15T23:01:07.512167+08:00",
+  "state": {
+    "pipeline_pid": 969264,
+    "task": "RobotLab-SmallDog-V67-RoughR6-v0",
+    "source_checkpoint": "/root/autodl-tmp/workspace/smalldog_cts_moe/logs/rsl_rl/smalldog_v67_refined_gait_moe_cts/2026-10-15_13-05-49_v67_r5_sampling_cache/model_12796.pt",
+    "source_iteration": 12796,
+    "starting_iteration": 12797,
+    "additional_iterations": 10000,
+    "expected_last_iteration": 22796,
+    "num_envs": 4096,
+    "initial_terrain_level_range": [
+      0,
+      10
+    ],
+    "terrain_curriculum": true,
+    "terrain_initialization": "uniform full range; legacy checkpoint has no per-env terrain state",
+    "initial_speed_ceiling_m_s": 1.0,
+    "maximum_speed_ceiling_m_s": 1.5,
+    "terrain_state_saved_in_future_checkpoints": true,
+    "status": "running",
+    "phase": "training",
+    "child_pid": 969696,
+    "log": "/root/autodl-tmp/workspace/smalldog_cts_moe/validation/r6_training.log",
+    "updated_at_utc": "2026-10-15T12:22:39.433248+00:00"
+  },
+  "manifest": {
+    "pid": 969696,
+    "task": "RobotLab-SmallDog-V67-RoughR6-v0",
+    "num_envs": 4096,
+    "source_checkpoint": "/root/autodl-tmp/workspace/smalldog_cts_moe/logs/rsl_rl/smalldog_v67_refined_gait_moe_cts/2026-10-15_13-05-49_v67_r5_sampling_cache/model_12796.pt",
+    "source_iteration": 12796,
+    "starting_iteration": 12797,
+    "additional_iterations": 10000,
+    "expected_last_iteration": 22796,
+    "load_optimizer": true,
+    "terrain_state_restored": false,
+    "terrain_initialization": "uniform_generated_levels",
+    "initial_terrain": {
+      "mean_level": 4.9541015625,
+      "min_level": 0,
+      "max_level": 10,
+      "level_histogram": [
+        369,
+        386,
+        386,
+        381,
+        369,
+        390,
+        359,
+        376,
+        329,
+        363,
+        388
+      ],
+      "forward_speed_ceiling_m_s": 1.0
+    },
+    "log_dir": "/root/autodl-tmp/workspace/smalldog_cts_moe/logs/rsl_rl/smalldog_v67_refined_gait_moe_cts/2026-10-15_20-22-45_v67_r6_terrain_speed_1p5_plus10000"
+  },
+  "latest": {
+    "iteration": 15496,
+    "Iteration time": 3.46,
+    "Collection time": 3.224,
+    "Learning time": 0.234,
+    "Curriculum/terrain_levels": 6.1413,
+    "Curriculum/forward_speed": 1.5,
+    "Episode_Termination/time_out": 0.9759,
+    "Episode_Termination/illegal_contact": 0.0095,
+    "Episode_Termination/bad_orientation": 0.0148,
+    "Metrics/base_velocity/error_vel_xy": 0.0716
+  },
+  "updates_completed": 2700,
+  "updates_remaining": 7300,
+  "recent_iteration_time_s": 3.431,
+  "latest_saved_terrain_state": {
+    "iteration": 15400,
+    "mean_level": 6.121337890625,
+    "min_level": 0,
+    "max_level": 10,
+    "level_histogram": [
+      111,
+      166,
+      241,
+      289,
+      350,
+      449,
+      444,
+      513,
+      568,
+      536,
+      429
+    ],
+    "forward_speed_ceiling_m_s": 1.5
+  },
+  "latest_checkpoint": "model_15400.pt"
+}

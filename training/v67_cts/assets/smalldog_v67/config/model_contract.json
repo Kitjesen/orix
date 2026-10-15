@@ -1,0 +1,435 @@
+{
+  "version": "v67_sim_r3",
+  "shell_source": "design/v67_continuous_head_tail",
+  "mass_kg": 13.902959597853824,
+  "base_mass_kg": 4.552740653913276,
+  "base_com_m": [
+    0.024552292685309316,
+    1.2667955004687375e-06,
+    0.07116042933708287
+  ],
+  "base_inertia_kg_m2": [
+    [
+      0.03120851362865106,
+      8.005892286678122e-07,
+      -0.008466652850386842
+    ],
+    [
+      8.005892286678122e-07,
+      0.06892265865541976,
+      -5.161628537540321e-07
+    ],
+    [
+      -0.008466652850386842,
+      -5.161628537540321e-07,
+      0.0782673207027208
+    ]
+  ],
+  "parts": [
+    {
+      "name": "body_upper",
+      "mass_kg": 0.29292486061807216,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        -0.00017415973831763274,
+        2.044505895549899e-05,
+        0.13063903738982713
+      ]
+    },
+    {
+      "name": "body_right",
+      "mass_kg": 0.10433454702436751,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.00464169519246832,
+        -0.10685105594583039,
+        0.06578772804812312
+      ]
+    },
+    {
+      "name": "body_left",
+      "mass_kg": 0.10439583060462305,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.004652452204177993,
+        0.10684898957392192,
+        0.06578242944574351
+      ]
+    },
+    {
+      "name": "body_lower",
+      "mass_kg": 0.2554089281691511,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.0038986898281837064,
+        -1.6273371834109162e-05,
+        -0.0022607416387773306
+      ]
+    },
+    {
+      "name": "head_upper",
+      "mass_kg": 0.11497828886628604,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.19693425657926678,
+        8.250178106862108e-07,
+        0.1719808941189162
+      ]
+    },
+    {
+      "name": "head_lower",
+      "mass_kg": 0.10776511942166593,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.19573798516560184,
+        -2.2173821451609445e-05,
+        0.12003156955286057
+      ]
+    },
+    {
+      "name": "head_face",
+      "mass_kg": 0.0076545179246173345,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.25581536251790976,
+        -1.7750719326691636e-06,
+        0.14768340307113298
+      ]
+    },
+    {
+      "name": "black_visor",
+      "mass_kg": 0.01858449901492693,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.258349999785425,
+        -1.503793491058824e-07,
+        0.14730237733205154
+      ]
+    },
+    {
+      "name": "ear_right",
+      "mass_kg": 0.021928139582324965,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.1732676864313228,
+        -0.0769184693635173,
+        0.1725850529218162
+      ]
+    },
+    {
+      "name": "ear_left",
+      "mass_kg": 0.021928578023544504,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.17326787385237785,
+        0.07691845633078048,
+        0.17258437551063155
+      ]
+    },
+    {
+      "name": "body_front_panel",
+      "mass_kg": 0.07507689180585822,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        0.1329745628831562,
+        -8.139347198112983e-07,
+        0.06452708465715346
+      ]
+    },
+    {
+      "name": "body_rear_panel",
+      "mass_kg": 0.06918404692207414,
+      "density_kg_m3_assumed": 1270.0,
+      "com_m": [
+        -0.1330000091821349,
+        -8.505767986576766e-07,
+        0.06823969173434373
+      ]
+    },
+    {
+      "name": "mount_L_rear_lower",
+      "mass_kg": 0.001819498844696032,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        -0.040000001030247284,
+        0.10075000039043297,
+        0.021457765156256508
+      ]
+    },
+    {
+      "name": "mount_L_rear_upper",
+      "mass_kg": 0.0018194987116446689,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        -0.040000001030247236,
+        0.10075000038992517,
+        0.09854226510297952
+      ]
+    },
+    {
+      "name": "mount_L_front_lower",
+      "mass_kg": 0.0017222692786557363,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        0.04000000104115027,
+        0.1007499992847444,
+        0.020411524900346208
+      ]
+    },
+    {
+      "name": "mount_L_front_upper",
+      "mass_kg": 0.0017222692921828881,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        0.04000000104115019,
+        0.1007499992847446,
+        0.09958847669616047
+      ]
+    },
+    {
+      "name": "mount_R_rear_lower",
+      "mass_kg": 0.001819498845779263,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        -0.04000000103024728,
+        -0.10075000039046693,
+        0.021457738730096966
+      ]
+    },
+    {
+      "name": "mount_R_rear_upper",
+      "mass_kg": 0.0018194987288149959,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        -0.0400000010302472,
+        -0.10075000039046675,
+        0.09854223880175948
+      ]
+    },
+    {
+      "name": "mount_R_front_lower",
+      "mass_kg": 0.0017222692786557363,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        0.04000000104115025,
+        -0.1007499992847444,
+        0.020411524900346208
+      ]
+    },
+    {
+      "name": "mount_R_front_upper",
+      "mass_kg": 0.0017222692921828894,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        0.04000000104115015,
+        -0.10074999928474455,
+        0.09958847669616039
+      ]
+    },
+    {
+      "name": "head_frame_bridge",
+      "mass_kg": 0.06831250423011447,
+      "density_kg_m3_assumed": 2700.0,
+      "com_m": [
+        0.10225867262764946,
+        2.0706001974410524e-19,
+        0.11818787476890137
+      ]
+    },
+    {
+      "name": "head_screw_M3x20_1",
+      "mass_kg": 0.0016590187055909981,
+      "density_kg_m3_assumed": 7850.0,
+      "com_m": [
+        0.1599999576190177,
+        -0.024000000060556605,
+        0.12086342366524305
+      ]
+    },
+    {
+      "name": "head_nut_M3_envelope_1",
+      "mass_kg": 0.00042681755162784634,
+      "density_kg_m3_assumed": 7850.0,
+      "com_m": [
+        0.15999994029345502,
+        -0.023999999924356943,
+        0.10880001739375221
+      ]
+    },
+    {
+      "name": "head_screw_M3x20_2",
+      "mass_kg": 0.0016590187055909949,
+      "density_kg_m3_assumed": 7850.0,
+      "com_m": [
+        0.15999995761901828,
+        0.02400000006055665,
+        0.12086342366524312
+      ]
+    },
+    {
+      "name": "head_nut_M3_envelope_2",
+      "mass_kg": 0.00042681755162784634,
+      "density_kg_m3_assumed": 7850.0,
+      "com_m": [
+        0.1599999402934547,
+        0.02399999992435693,
+        0.10880001739375253
+      ]
+    },
+    {
+      "name": "head_screw_M3x20_3",
+      "mass_kg": 0.0016590168159768633,
+      "density_kg_m3_assumed": 7850.0,
+      "com_m": [
+        0.17999995564318205,
+        -0.024000000060557275,
+        0.12086342068931857
+      ]
+    },
+    {
+      "name": "head_nut_M3_envelope_3",
+      "mass_kg": 0.00042681769753946143,
+      "density_kg_m3_assumed": 7850.0,
+      "com_m": [
+        0.17999994058582175,
+        -0.023999999924357078,
+        0.1088000173937466
+      ]
+    },
+    {
+      "name": "head_screw_M3x20_4",
+      "mass_kg": 0.0016590168159768633,
+      "density_kg_m3_assumed": 7850.0,
+      "com_m": [
+        0.17999995564318205,
+        0.024000000060557282,
+        0.12086342068931874
+      ]
+    },
+    {
+      "name": "head_nut_M3_envelope_4",
+      "mass_kg": 0.00042681769753945926,
+      "density_kg_m3_assumed": 7850.0,
+      "com_m": [
+        0.17999994058582267,
+        0.02399999992435719,
+        0.10880001739374716
+      ]
+    }
+  ],
+  "joint_order": [
+    "fr_hip_joint",
+    "fr_thigh_joint",
+    "fr_calf_joint",
+    "fl_hip_joint",
+    "fl_thigh_joint",
+    "fl_calf_joint",
+    "rr_hip_joint",
+    "rr_thigh_joint",
+    "rr_calf_joint",
+    "rl_hip_joint",
+    "rl_thigh_joint",
+    "rl_calf_joint"
+  ],
+  "standing_joint_angles_rad": {
+    "fr_hip_joint": 0.0,
+    "fr_thigh_joint": -0.6715534335840251,
+    "fr_calf_joint": 1.1,
+    "fl_hip_joint": 0.0,
+    "fl_thigh_joint": 0.6715534335840251,
+    "fl_calf_joint": -1.1,
+    "rr_hip_joint": 0.0,
+    "rr_thigh_joint": -0.6715534335840251,
+    "rr_calf_joint": 1.1,
+    "rl_hip_joint": 0.0,
+    "rl_thigh_joint": 0.6715534335840251,
+    "rl_calf_joint": -1.1
+  },
+  "joint_position_limits_rad": {
+    "fr_hip_joint": [
+      -0.3,
+      0.3
+    ],
+    "fr_thigh_joint": [
+      -1.25,
+      0.15
+    ],
+    "fr_calf_joint": [
+      0.4,
+      2.1
+    ],
+    "fl_hip_joint": [
+      -0.3,
+      0.3
+    ],
+    "fl_thigh_joint": [
+      -0.15,
+      1.25
+    ],
+    "fl_calf_joint": [
+      -2.1,
+      -0.4
+    ],
+    "rr_hip_joint": [
+      -0.3,
+      0.3
+    ],
+    "rr_thigh_joint": [
+      -1.25,
+      0.15
+    ],
+    "rr_calf_joint": [
+      0.4,
+      2.1
+    ],
+    "rl_hip_joint": [
+      -0.3,
+      0.3
+    ],
+    "rl_thigh_joint": [
+      -0.15,
+      1.25
+    ],
+    "rl_calf_joint": [
+      -2.1,
+      -0.4
+    ]
+  },
+  "initial_root_height_m": 0.2674918208774965,
+  "base_height_target_m": 0.2561583499877814,
+  "soft_joint_pos_limit_factor": 0.9,
+  "action_scale_rad": {
+    "hip": 0.15,
+    "thigh": 0.2,
+    "calf": 0.2
+  },
+  "angle_window_source": "2026-10-14 r3 URDF collision-envelope samples and Isaac import validation; not calibrated mechanical stops",
+  "calf_total_ratio": 2.0,
+  "ratio_source": "User confirmed 2:1 on 2026-10-12",
+  "motor_internal_ratio_applied_again": false,
+  "joint_effort_cap_nm": {
+    "hip": 7,
+    "thigh": 7,
+    "calf": 14
+  },
+  "joint_speed_cap_rad_s": {
+    "hip": 42.9350995991,
+    "thigh": 42.9350995991,
+    "calf": 21.4675497995
+  },
+  "estimated_payloads_kg": {
+    "battery": 1.6,
+    "head_electronics": 0.2,
+    "compute_board": 0.15
+  },
+  "board_center_z_m": 0.11,
+  "board_relocation_note": "Simulation packaging proposal: 16 mm lower; mechanical mounting not designed",
+  "limitations": [
+    "Sampled simulation joint window; native mechanism and continuous sweep validation remain bounded",
+    "Material densities and payloads are estimates",
+    "Ideal constant 2:1 calf transmission; no loss, backlash or thermal model",
+    "Fixed head and ears",
+    "Primitive and convex collision proxies, not full CAD contacts",
+    "PD gains are simulation tuning values; no hardware validation"
+  ]
+}

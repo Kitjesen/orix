@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "asset_dir": "training/v67_cts/assets/smalldog_v67",
+  "version": "v67_sim_r3",
+  "urdf": "urdf/smalldog_v67.urdf",
+  "links": 19,
+  "revolute_joints": 12,
+  "mesh_references": 69,
+  "unique_mesh_references": 69,
+  "mass_kg": 13.902959597853828,
+  "initial_root_height_m": 0.2674918208774965,
+  "errors": [],
+  "scope": "Portable paths, file presence, 12 revolute joint limits, standing pose, mass and JSON contract consistency; no CAD sweep, dynamics or hardware test"
+}

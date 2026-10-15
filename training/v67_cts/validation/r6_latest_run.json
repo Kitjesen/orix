@@ -1,0 +1,33 @@
+{
+  "pid": 969696,
+  "task": "RobotLab-SmallDog-V67-RoughR6-v0",
+  "num_envs": 4096,
+  "source_checkpoint": "/root/autodl-tmp/workspace/smalldog_cts_moe/logs/rsl_rl/smalldog_v67_refined_gait_moe_cts/2026-10-15_13-05-49_v67_r5_sampling_cache/model_12796.pt",
+  "source_iteration": 12796,
+  "starting_iteration": 12797,
+  "additional_iterations": 10000,
+  "expected_last_iteration": 22796,
+  "load_optimizer": true,
+  "terrain_state_restored": false,
+  "terrain_initialization": "uniform_generated_levels",
+  "initial_terrain": {
+    "mean_level": 4.9541015625,
+    "min_level": 0,
+    "max_level": 10,
+    "level_histogram": [
+      369,
+      386,
+      386,
+      381,
+      369,
+      390,
+      359,
+      376,
+      329,
+      363,
+      388
+    ],
+    "forward_speed_ceiling_m_s": 1.0
+  },
+  "log_dir": "/root/autodl-tmp/workspace/smalldog_cts_moe/logs/rsl_rl/smalldog_v67_refined_gait_moe_cts/2026-10-15_20-22-45_v67_r6_terrain_speed_1p5_plus10000"
+}

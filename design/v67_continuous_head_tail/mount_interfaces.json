@@ -1,0 +1,175 @@
+{
+  "units": "mm",
+  "source": "../mounting_v1/frame_mount_holes.json",
+  "ports": [
+    {
+      "side": 1,
+      "frame_hole_mm": [
+        -40,
+        100,
+        7.5
+      ],
+      "shell_hole_mm": [
+        -40,
+        101.7,
+        35
+      ],
+      "shell_bore_mm": 3.4,
+      "frame_clearance_bore_mm": 4.5,
+      "tab_thickness_mm": 1.5,
+      "nominal_tab_boss_gap_mm": 0.2,
+      "source_shell_y_intersections_mm": [
+        103.77822875976562,
+        106.95116424560547
+      ]
+    },
+    {
+      "side": 1,
+      "frame_hole_mm": [
+        -40,
+        100,
+        112.5
+      ],
+      "shell_hole_mm": [
+        -40,
+        101.7,
+        85
+      ],
+      "shell_bore_mm": 3.4,
+      "frame_clearance_bore_mm": 4.5,
+      "tab_thickness_mm": 1.5,
+      "nominal_tab_boss_gap_mm": 0.2,
+      "source_shell_y_intersections_mm": [
+        103.81330108642578,
+        106.93539428710938
+      ]
+    },
+    {
+      "side": 1,
+      "frame_hole_mm": [
+        40,
+        100,
+        7.5
+      ],
+      "shell_hole_mm": [
+        40,
+        101.7,
+        35
+      ],
+      "shell_bore_mm": 3.4,
+      "frame_clearance_bore_mm": 4.5,
+      "tab_thickness_mm": 1.5,
+      "nominal_tab_boss_gap_mm": 0.2,
+      "source_shell_y_intersections_mm": [
+        102.8669204711914,
+        106.06397247314453
+      ]
+    },
+    {
+      "side": 1,
+      "frame_hole_mm": [
+        40,
+        100,
+        112.5
+      ],
+      "shell_hole_mm": [
+        40,
+        101.7,
+        85
+      ],
+      "shell_bore_mm": 3.4,
+      "frame_clearance_bore_mm": 4.5,
+      "tab_thickness_mm": 1.5,
+      "nominal_tab_boss_gap_mm": 0.2,
+      "source_shell_y_intersections_mm": [
+        102.9355239868164,
+        106.11305236816406
+      ]
+    },
+    {
+      "side": -1,
+      "frame_hole_mm": [
+        -40,
+        -100,
+        7.5
+      ],
+      "shell_hole_mm": [
+        -40,
+        -101.7,
+        35
+      ],
+      "shell_bore_mm": 3.4,
+      "frame_clearance_bore_mm": 4.5,
+      "tab_thickness_mm": 1.5,
+      "nominal_tab_boss_gap_mm": 0.2,
+      "source_shell_y_intersections_mm": [
+        103.79273986816406,
+        106.95831298828125
+      ]
+    },
+    {
+      "side": -1,
+      "frame_hole_mm": [
+        -40,
+        -100,
+        112.5
+      ],
+      "shell_hole_mm": [
+        -40,
+        -101.7,
+        85
+      ],
+      "shell_bore_mm": 3.4,
+      "frame_clearance_bore_mm": 4.5,
+      "tab_thickness_mm": 1.5,
+      "nominal_tab_boss_gap_mm": 0.2,
+      "source_shell_y_intersections_mm": [
+        103.83059692382812,
+        106.95442962646484
+      ]
+    },
+    {
+      "side": -1,
+      "frame_hole_mm": [
+        40,
+        -100,
+        7.5
+      ],
+      "shell_hole_mm": [
+        40,
+        -101.7,
+        35
+      ],
+      "shell_bore_mm": 3.4,
+      "frame_clearance_bore_mm": 4.5,
+      "tab_thickness_mm": 1.5,
+      "nominal_tab_boss_gap_mm": 0.2,
+      "source_shell_y_intersections_mm": [
+        102.88704681396484,
+        106.08087921142578
+      ]
+    },
+    {
+      "side": -1,
+      "frame_hole_mm": [
+        40,
+        -100,
+        112.5
+      ],
+      "shell_hole_mm": [
+        40,
+        -101.7,
+        85
+      ],
+      "shell_bore_mm": 3.4,
+      "frame_clearance_bore_mm": 4.5,
+      "tab_thickness_mm": 1.5,
+      "nominal_tab_boss_gap_mm": 0.2,
+      "source_shell_y_intersections_mm": [
+        102.94898223876953,
+        106.09534454345703
+      ]
+    }
+  ],
+  "status": "nominal interfaces; bolt length, thread/nut capture and local contact validation pending"
+}

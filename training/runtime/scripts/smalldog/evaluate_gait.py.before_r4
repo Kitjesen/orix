@@ -1,0 +1,133 @@
+"""Evaluate the deterministic student on the current phase-observable flat task."""
+# ruff: noqa: E402
+import argparse
+import json
+from pathlib import Path
+
+from isaaclab.app import AppLauncher
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--checkpoint", required=True)
+parser.add_argument("--output", required=True)
+parser.add_argument("--command-vx", type=float, default=0.3)
+parser.add_argument("--num-envs", type=int, default=16)
+parser.add_argument("--rough", action="store_true")
+parser.add_argument("--max-terrain-level", type=int, default=0)
+AppLauncher.add_app_launcher_args(parser)
+args = parser.parse_args()
+app = AppLauncher(args).app
+
+import gymnasium as gym
+import robot_lab.tasks  # noqa: F401
+import torch
+from isaaclab_rl.rsl_rl import RslRlVecEnvWrapper
+from robot_lab.assets.smalldog import CONTRACT
+from robot_lab.tasks.smalldog.gait_cfg import SmallDogFlatGaitEnvCfg, SmallDogGaitEnvCfg, SmallDogGaitRunnerCfg
+from rsl_rl.runners import OnPolicyRunnerCTS
+
+cfg = SmallDogGaitEnvCfg() if args.rough else SmallDogFlatGaitEnvCfg()
+task = "RobotLab-SmallDog-V67-RoughGait-v0" if args.rough else "RobotLab-SmallDog-V67-FlatGait-v0"
+cfg.curriculum.terrain_levels = None
+cfg.curriculum.forward_speed = None
+if args.rough:
+    cfg.scene.terrain.max_init_terrain_level = args.max_terrain_level
+cfg.scene.num_envs = args.num_envs
+cfg.sim.device = args.device
+cfg.seed = 43
+for name in vars(cfg.events):
+    if name.startswith("randomize_"):
+        setattr(cfg.events, name, None)
+cfg.events.reset_base.params["pose_range"] = {}
+cfg.commands.base_velocity.ranges.lin_vel_x = (args.command_vx, args.command_vx)
+cfg.commands.base_velocity.ranges.lin_vel_y = (0, 0)
+cfg.commands.base_velocity.ranges.ang_vel_z = (0, 0)
+cfg.commands.base_velocity.rel_standing_envs = 0
+for group in (cfg.observations.policy, cfg.observations.single_obs):
+    group.enable_corruption = False
+env = RslRlVecEnvWrapper(gym.make(task, cfg=cfg))
+runner = OnPolicyRunnerCTS(env, SmallDogGaitRunnerCfg().to_dict(), log_dir=None, device=args.device)
+runner.load(args.checkpoint, load_optimizer=False)
+policy = runner.get_inference_policy()
+obs = env.get_observations()
+u = env.unwrapped
+robot = u.scene["robot"]
+term = u.action_manager.get_term("joint_pos")
+joint_ids, joint_names = robot.find_joints(cfg.actions.joint_pos.joint_names, preserve_order=True)
+foot_names = ["fl_foot_Link", "fr_foot_Link", "rl_foot_Link", "rr_foot_Link"]
+foot_ids, resolved = robot.find_bodies(foot_names, preserve_order=True)
+assert resolved == foot_names
+sensor = u.scene["contact_forces"]
+sensor_ids, resolved = sensor.find_bodies(foot_names, preserve_order=True)
+assert resolved == foot_names
+samples, terminations = [], 0
+terminations_per_env = torch.zeros(args.num_envs, dtype=torch.long, device=u.device)
+with torch.inference_mode():
+    for step in range(500):
+        actions = policy(obs)
+        assert torch.isfinite(actions).all()
+        obs, reward, dones, _ = env.step(actions)
+        terminations += int(dones.sum())
+        terminations_per_env += dones.long()
+        assert torch.isfinite(robot.data.joint_pos).all()
+        if step >= 100:
+            samples.append({
+                "vx": robot.data.root_lin_vel_b[:, 0].clone(),
+                "upright": -robot.data.projected_gravity_b[:, 2].clone(),
+                "clip": ((term.raw_actions * term._scale + term._offset - term.processed_actions).abs() > 1e-6).clone(),
+                "foot_z": robot.data.body_link_pos_w[:, foot_ids, 2].clone(),
+                "contacts": (sensor.data.net_forces_w[:, sensor_ids].norm(dim=-1) > 1).clone(),
+                "torque": robot.data.applied_torque[:, joint_ids].clone(),
+            })
+vx = torch.stack([x["vx"] for x in samples])
+foot_z = torch.stack([x["foot_z"] for x in samples])
+contacts = torch.stack([x["contacts"] for x in samples])
+clips = torch.stack([x["clip"] for x in samples])
+torques = torch.stack([x["torque"] for x in samples])
+fl_rr = contacts[..., 0] & contacts[..., 3] & ~contacts[..., 1] & ~contacts[..., 2]
+fr_rl = contacts[..., 1] & contacts[..., 2] & ~contacts[..., 0] & ~contacts[..., 3]
+report = {
+    "asset_version": CONTRACT["version"], "checkpoint": args.checkpoint,
+    "task": task, "student_policy": True,
+    "num_envs": args.num_envs, "duration_s": 10, "analysis_after_s": 2,
+    "command_vx_m_s": args.command_vx, "terminations": terminations,
+    "mean_vx_m_s": float(vx.mean()), "mean_abs_vx_error_m_s": float((vx - args.command_vx).abs().mean()),
+    "mean_upright_cosine": float(torch.stack([x["upright"] for x in samples]).mean()),
+    "joint_target_clip_fraction": dict(zip(joint_names, clips.float().mean(dim=(0, 1)).tolist())),
+    "foot_link_z_range_m_mean_per_env": dict(zip(foot_names, (foot_z.amax(dim=0) - foot_z.amin(dim=0)).mean(dim=0).tolist())),
+    "foot_contact_fraction": dict(zip(foot_names, contacts.float().mean(dim=(0, 1)).tolist())),
+    "joint_peak_abs_torque_nm": dict(zip(joint_names, torques.abs().amax(dim=(0, 1)).tolist())),
+    "fl_rr_only_contact_fraction": float(fl_rr.float().mean()),
+    "fr_rl_only_contact_fraction": float(fr_rl.float().mean()),
+    "all_feet_contact_fraction": float(contacts.all(dim=-1).float().mean()),
+    "note": "Constant-speed student rollout without exploration or domain randomization; foot link motion and force contacts, not hardware proof.",
+}
+if args.rough:
+    terrain = u.scene.terrain
+    names = list(cfg.scene.terrain.terrain_generator.sub_terrains)
+    weights = torch.tensor([part.proportion for part in cfg.scene.terrain.terrain_generator.sub_terrains.values()], device=u.device)
+    fractions = (terrain.terrain_types.float() + 0.5) / cfg.scene.terrain.terrain_generator.num_cols
+    types = torch.searchsorted(weights.cumsum(0) / weights.sum(), fractions)
+    report["terrain_level_range"] = [int(terrain.terrain_levels.min()), int(terrain.terrain_levels.max())]
+    report["terrain_group_note"] = "Groups identify initial terrain tiles; the robot may cross neighboring tiles during rollout."
+    report["per_terrain"] = {}
+    for index, name in enumerate(names):
+        mask = types == index
+        if mask.any():
+            report["per_terrain"][name] = {
+                "num_envs": int(mask.sum()), "terminations": int(terminations_per_env[mask].sum()),
+                "mean_vx_m_s": float(vx[:, mask].mean()),
+                "mean_abs_vx_error_m_s": float((vx[:, mask] - args.command_vx).abs().mean()),
+            }
+    report["per_level"] = {}
+    for level in range(args.max_terrain_level + 1):
+        mask = terrain.terrain_levels == level
+        if mask.any():
+            report["per_level"][str(level)] = {
+                "num_envs": int(mask.sum()), "terminations": int(terminations_per_env[mask].sum()),
+                "mean_vx_m_s": float(vx[:, mask].mean()),
+                "mean_abs_vx_error_m_s": float((vx[:, mask] - args.command_vx).abs().mean()),
+            }
+Path(args.output).write_text(json.dumps(report, indent=2))
+print("SMALLDOG_GAIT_EVALUATION " + json.dumps(report), flush=True)
+env.close()
+app.close()

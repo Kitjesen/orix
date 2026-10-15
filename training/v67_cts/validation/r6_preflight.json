@@ -1,0 +1,37 @@
+{
+  "pass": true,
+  "task": "RobotLab-SmallDog-V67-RoughR6-v0",
+  "num_envs": 220,
+  "source_iteration": 12796,
+  "initial_terrain": {
+    "mean_level": 5.0,
+    "min_level": 0,
+    "max_level": 10,
+    "level_histogram": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "forward_speed_ceiling_m_s": 1.0
+  },
+  "frequency_by_command_m_s": {
+    "0.0": 1.5,
+    "0.3": 1.5,
+    "1.0": 2.5,
+    "1.25": 2.75,
+    "1.5": 3.0
+  },
+  "finite_rollout_steps": 120,
+  "rollout_terminations": 3,
+  "optimizer_and_student_optimizer_loaded": true,
+  "terrain_checkpoint_round_trip": true,
+  "note": "Full-range terrain wiring and finite rollout; not evidence that 1.5 m/s is learned."
+}

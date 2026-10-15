@@ -1,0 +1,20 @@
+{
+  "iteration": 12800,
+  "mean_level": 4.84130859375,
+  "min_level": 0,
+  "max_level": 10,
+  "level_histogram": [
+    415,
+    392,
+    382,
+    375,
+    379,
+    381,
+    358,
+    375,
+    333,
+    369,
+    337
+  ],
+  "forward_speed_ceiling_m_s": 1.0
+}

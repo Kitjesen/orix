@@ -1,0 +1,30 @@
+{
+  "component_count": 30,
+  "integrity": [
+    {
+      "name": "body_upper",
+      "watertight": true,
+      "single_solid": true,
+      "positive_volume": true
+    },
+    {
+      "name": "head_upper",
+      "watertight": true,
+      "single_solid": true,
+      "positive_volume": true
+    },
+    {
+      "name": "head_lower",
+      "watertight": true,
+      "single_solid": true,
+      "positive_volume": true
+    }
+  ],
+  "leg_sample_count": 588,
+  "leg_contacts": [],
+  "native_positive_intersections": [],
+  "native_unresolved": [],
+  "native_scope": "5 head-lower / mount-fastener pairs; final body shoulder-only smoothing does not affect these pairs",
+  "remaining_documents": [],
+  "user_instance_retained": true
+}

@@ -1,0 +1,53 @@
+{
+  "frame_hole_centers_mm": [
+    [
+      40,
+      -70,
+      112.5
+    ],
+    [
+      40,
+      70,
+      112.5
+    ]
+  ],
+  "frame_hole_source": "existing upper-rail through holes; bolts shared with V59 outer tabs; bolt length pending full stack",
+  "head_holes_xy_mm": [
+    [
+      160,
+      -24
+    ],
+    [
+      160,
+      24
+    ],
+    [
+      180,
+      -24
+    ],
+    [
+      180,
+      24
+    ]
+  ],
+  "head_clearance_hole_diameter_mm": 3.4,
+  "bridge_top_z_mm": 113,
+  "boss_top_z_mm": 127,
+  "fasteners": "four M3x20 socket screws, four M3 nuts; unthreaded sizing envelopes",
+  "service_sequence": [
+    "remove head upper cover",
+    "unplug the head harness",
+    "hold underside nuts and remove four vertical screws",
+    "lift complete head lower tray and face off the bridge"
+  ],
+  "remaining": "head upper-cover fasteners, nut capture, harness connector/strain relief, bridge stiffness and manufacture route unqualified",
+  "bridge": "retained upper rail anchors, downturned front web, 12 mm lower seat",
+  "rear_seat_relief": {
+    "x_mm": [
+      139.9,
+      151
+    ],
+    "half_width_mm": 18,
+    "head_hole_xy": "retained from V63"
+  }
+}
