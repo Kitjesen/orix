@@ -1,11 +1,11 @@
 # SmallDog V67 training asset
 
-This directory is the portable asset used by the current SmallDog reinforcement-learning configuration. The model version is `v67_sim_r3`: the V67 shell and battery-envelope model with 12 actuated revolute joints.
+This directory is the portable asset used by the current SmallDog reinforcement-learning configuration. The model version is `v67_sim_r5_headless`: the headless V67 shell and battery-envelope model with 12 actuated revolute joints.
 
 ## Contents
 
 - `urdf/smalldog_v67.urdf` — training URDF with local relative mesh references.
-- `meshes/` — 69 referenced STL files for the mechanism, V67 appearance, collision proxies, and trial packaging geometry.
+- `meshes/` — 35 referenced STL files for the mechanism, V67 appearance, collision proxies, and trial packaging geometry.
 - `config/model_contract.json` — mass, joint order, standing pose, joint limits, actuator caps, payload assumptions, and model limitations.
 - `config/standing_pose.yaml` — human-readable copy of the default joint pose.
 - `../../joint_motion_config.json` — training-side copy of the motion window and default pose.
@@ -21,8 +21,8 @@ Run `python tools/validate_training_asset.py` from the repository root before pu
 
 ## Default pose and recorded model values
 
-- Version: `v67_sim_r3`, derived from `design/v67_continuous_head_tail`.
-- Total URDF mass: 13.902959597853824 kg.
+- Version: `v67_sim_r5_headless`, derived from `design/v67_continuous_head_tail`.
+- Total URDF mass: 13.333464609253827 kg.
 - Initial root height: 0.2674918208774965 m.
 - Base-height target: 0.2561583499877814 m.
 - Default hips: 0 rad.
@@ -33,17 +33,21 @@ The full named pose, position limits, effort caps, and velocity caps are recorde
 
 ## Evidence boundary
 
-The 1.6 kg battery, 0.2 kg head-electronics load, and 0.15 kg compute-board load are simulation packaging estimates. The battery geometry is a trial envelope. The Orix naked-mainboard shape is also a trial visual envelope; it does not confirm the production board, enclosure, connector clearance, mounting, cooling, or assembled hardware mass.
+The 1.6 kg battery and 0.15 kg compute-board load are simulation packaging estimates. Head electronics (previously 0.2 kg) and the head assembly have been removed. The battery geometry is a trial envelope. The Orix naked-mainboard shape is also a trial visual envelope; it does not confirm the production board, enclosure, connector clearance, mounting, cooling, or assembled hardware mass.
 
-Joint position windows came from bounded collision-envelope samples and Isaac import validation. They are not measured mechanical stops. The model assumes an ideal constant 2:1 calf transmission and does not model backlash, losses, thermal limits, or a calibrated closed-loop linkage stroke. PD gains, collision proxies, payload estimates, and the fixed head/ears remain simulation assumptions. Passing the validator establishes asset portability and internal contract consistency only; it does not establish CAD interference clearance, dynamics accuracy, or hardware safety.
+The 2026-11-12 recovery update uses user-requested hip limits of +/-1.05 rad and a common thigh interval [-1.57, 3.49] rad measured from vertical-down zero with positive angles backward. In existing URDF coordinates this becomes [-3.140796326795, 1.919203673205] rad on the right and [-1.919203673205, 3.140796326795] rad on the left. Calf position limits retain the r3 window. All URDF joint effort limits are 17 N.m. These user-configured windows are not measured mechanical stops or a CAD interference clearance validation. The model assumes an ideal constant 2:1 calf transmission and does not model backlash, losses, thermal limits, or a calibrated closed-loop linkage stroke. PD gains, collision proxies, and payload estimates remain simulation assumptions. Passing the validator establishes asset portability and internal contract consistency only; it does not establish CAD interference clearance, dynamics accuracy, or hardware safety.
 
 ## Minimum publication set
 
 Publish this complete directory together with:
 
 - `training/v67_cts/joint_motion_config.json`
-- the training task and runner configuration that select `v67_sim_r3`
+- the training task and runner configuration that select `v67_sim_r5_headless`
 - the policy/checkpoint release notes and configuration needed to interpret any published checkpoint
 - `tools/validate_training_asset.py`
 
 Do not publish the URDF without its `meshes/` and `config/` directories.
+
+## Head removal (2026-11-12)
+
+Removed head shells, face, visor, ears, camera/ear decorations, head mounting bridge and fasteners, and the 0.2 kg head electronics allowance. Removed mass: 0.569494988605 kg. Base mass, COM and inertia were rebuilt from the retained components. Body shells, battery, compute board, all leg geometry, joint axes, limits and standing angles remain unchanged. The USD version is new to avoid reusing the headed asset cache.
