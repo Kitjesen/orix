@@ -1,4 +1,4 @@
-"""Build the V67 simulation asset from saved CAD meshes and mechanical URDF."""
+"""Build the headless V67 recovery asset from saved CAD meshes and mechanical URDF."""
 import json
 import shutil
 import xml.etree.ElementTree as ET
@@ -29,12 +29,24 @@ for joint in list(root.findall('joint')):
         low, high = motion['joint_position_limits_rad'][joint.get('name')]
         joint.find('limit').set('lower', str(low))
         joint.find('limit').set('upper', str(high))
-        joint.find('limit').set('effort', '14' if calf else '7')
+        joint.find('limit').set('effort', '17')
         joint.find('limit').set('velocity', str(410 * np.pi / 30 / (2 if calf else 1)))
 
 # All components added here are fixed to base_link. Combine tensors about their
 # COM using the parallel-axis theorem, keeping the measured mechanical inertia.
 base = root.find("link[@name='base_link']")
+
+
+def is_head_part(name):
+    return name.startswith(('head_', 'ear_', 'camera_')) or name == 'black_visor'
+
+
+# graphics 36-43 decorate the ears; 44-46 decorate the face in the V67 source.
+head_graphics = {f'graphic_{i}' for i in range(36, 47)}
+for visual in list(base.findall('visual')):
+    name = visual.get('name', '').removeprefix('v67_')
+    if is_head_part(name) or name in head_graphics:
+        base.remove(visual)
 i = base.find('inertial')
 c = np.fromstring(i.find('origin').get('xyz'), sep=' ')
 v = i.find('inertia').attrib
@@ -45,6 +57,8 @@ components = [('original_base', float(i.find('mass').get('value')), c, tensor)]
 part_records = []
 spec = json.loads((DESIGN / 'assembly.json').read_text(encoding='utf-8'))
 for part in spec['parts']:
+    if is_head_part(part['name']):
+        continue
     mesh = trimesh.load(DESIGN / part['mesh'], force='mesh')
     assert mesh.is_watertight and mesh.volume > 0, part['name']
     mesh.apply_scale(0.001)
@@ -60,7 +74,7 @@ def box_mass(name, mass, center, size):
     components.append((name, mass, np.array(center), inertia))
 
 # Payload allowances are explicit estimates until real components are weighed.
-box_mass('head_electronics_allowance', 0.2, (0.213, 0, 0.15), (0.08, 0.10, 0.05))
+# Head electronics (previous allowance 0.2 kg) removed with the head per user.
 box_mass('compute_board_allowance', 0.15, (0, 0, 0.11), (0.22, 0.12, 0.002))
 board = base.find("visual[@name='orix_board_envelope_trial']/origin")
 board.set('xyz', '0 0 0.110')
@@ -80,13 +94,12 @@ def collision_box(link, name, center, size):
     ET.SubElement(collision, 'origin', xyz=' '.join(map(str, center)), rpy='0 0 0')
     ET.SubElement(ET.SubElement(collision, 'geometry'), 'box', size=' '.join(map(str, size)))
 
-# Primitive side/belly proxies preserve hip cutouts. Separate convex upper/head
-# proxies cover exposed shells without filling the whole shoulder motor space.
+# Side/belly proxies preserve hip cutouts; only the retained upper shell gets
+# a convex proxy. Head and ear colliders are absent in this asset.
 collision_box(base, 'v67_belly', (-0.004, 0, 0.009), (0.26, 0.212, 0.031))
 for side in (-1, 1):
     collision_box(base, 'v67_side_' + str(side), (-0.004, side * 0.109, 0.07), (0.246, 0.012, 0.105))
-for name, selected in [('upper', ['body_upper']), ('head', ['head_upper', 'head_lower', 'head_face']),
-                       ('ear_left', ['ear_left']), ('ear_right', ['ear_right'])]:
+for name, selected in [('upper', ['body_upper'])]:
     meshes = [trimesh.load(DESIGN / ('meshes/' + n + '.stl'), force='mesh') for n in selected]
     hull = trimesh.util.concatenate(meshes).convex_hull
     hull.apply_scale(0.001)
@@ -141,13 +154,17 @@ contract = {'version': motion['version'], 'shell_source': 'design/v67_continuous
             'angle_window_source': motion['angle_window_source'],
             'calf_total_ratio': 2.0, 'ratio_source': 'User confirmed 2:1 on 2026-10-12',
             'motor_internal_ratio_applied_again': False,
-            'joint_effort_cap_nm': {'hip': 7, 'thigh': 7, 'calf': 14},
+            'joint_effort_cap_nm': {'hip': 17, 'thigh': 17, 'calf': 17},
             'joint_speed_cap_rad_s': {'hip': 42.9350995991, 'thigh': 42.9350995991, 'calf': 21.4675497995},
-            'estimated_payloads_kg': {'battery': 1.6, 'head_electronics': 0.2, 'compute_board': 0.15},
+            'estimated_payloads_kg': {'battery': 1.6, 'head_electronics': 0.0, 'compute_board': 0.15},
             'board_center_z_m': 0.11, 'board_relocation_note': 'Simulation packaging proposal: 16 mm lower; mechanical mounting not designed',
-            'limitations': ['Sampled simulation joint window; native mechanism and continuous sweep validation remain bounded', 'Material densities and payloads are estimates',
+            'limitations': ['User-configured simulation joint window; native mechanism and continuous sweep validation remain bounded', 'Material densities and payloads are estimates',
                             'Ideal constant 2:1 calf transmission; no loss, backlash or thermal model',
-                            'Fixed head and ears', 'Primitive and convex collision proxies, not full CAD contacts',
+                            'Head, ears, mounting bridge, fasteners and estimated head electronics removed', 'Primitive and convex collision proxies, not full CAD contacts',
                             'PD gains are simulation tuning values; no hardware validation']}
+contract['head_removed'] = True
+contract['head_removal_scope'] = 'Head shells, visor, ears, head bridge, head fasteners, optical/ear decorations, and 0.2 kg electronics allowance removed; body shells, battery and compute board retained.'
+for field in ('thigh_limit_coordinate_policy', 'thigh_reference_definition'):
+    contract[field] = motion[field]
 (OUT / 'config/model_contract.json').write_text(json.dumps(contract, ensure_ascii=False, indent=2), encoding='utf-8')
 print(json.dumps({'urdf': str(target), 'mass_kg': total, 'base_mass_kg': mass, 'links': len(root.findall('link')), 'active_joints': len(pose)}))
