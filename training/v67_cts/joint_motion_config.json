@@ -1,50 +1,50 @@
 {
-  "version": "v67_sim_r3",
-  "status": "experimental_simulation_geometry_window",
+  "version": "v67_sim_r5_headless",
+  "status": "user_requested_simulation_joint_window",
   "joint_position_limits_rad": {
     "fr_hip_joint": [
-      -0.3,
-      0.3
+      -1.05,
+      1.05
     ],
     "fr_thigh_joint": [
-      -1.25,
-      0.15
+      -3.140796326794897,
+      1.9192036732051037
     ],
     "fr_calf_joint": [
       0.4,
       2.1
     ],
     "fl_hip_joint": [
-      -0.3,
-      0.3
+      -1.05,
+      1.05
     ],
     "fl_thigh_joint": [
-      -0.15,
-      1.25
+      -1.9192036732051037,
+      3.140796326794897
     ],
     "fl_calf_joint": [
       -2.1,
       -0.4
     ],
     "rr_hip_joint": [
-      -0.3,
-      0.3
+      -1.05,
+      1.05
     ],
     "rr_thigh_joint": [
-      -1.25,
-      0.15
+      -3.140796326794897,
+      1.9192036732051037
     ],
     "rr_calf_joint": [
       0.4,
       2.1
     ],
     "rl_hip_joint": [
-      -0.3,
-      0.3
+      -1.05,
+      1.05
     ],
     "rl_thigh_joint": [
-      -0.15,
-      1.25
+      -1.9192036732051037,
+      3.140796326794897
     ],
     "rl_calf_joint": [
       -2.1,
@@ -73,8 +73,25 @@
     "thigh": 0.2,
     "calf": 0.2
   },
-  "angle_window_source": "2026-10-14 r3 URDF collision-envelope samples and Isaac import validation; not calibrated mechanical stops",
+  "angle_window_source": "2026-11-12 user requested hip +/-1.05 rad and thigh reference interval [-1.57, 3.49] rad measured from vertical-down zero, positive backward; thigh bounds converted to existing mirrored URDF coordinates; calf bounds retained from r3; not calibrated mechanical stops",
   "stance_basis": "Keep the original foot-center XY; calf magnitude1.10 and solved thigh magnitude0.6715534335840251; rootheight preserves11.333mm initial sole gap",
   "calf_upper_basis": "Experimental geometry extension to2.10rad; native gear engagement and closed-loop linkage stroke are not calibrated",
-  "thigh_zero_basis": "Hard extension0.15rad past zero keeps0 inside90percent soft action window"
+  "thigh_zero_basis": "Existing mirrored URDF zero retained; vertical-down zero maps to -pi/2 on right thighs and +pi/2 on left thighs.",
+  "thigh_limit_coordinate_policy": "Preserve existing URDF axes and zero; transform common vertical-down, positive-backward reference limits separately for right and left legs.",
+  "thigh_reference_definition": {
+    "zero": "thigh vertically downward",
+    "positive_direction": "backward",
+    "limits_rad": [
+      -1.57,
+      3.49
+    ],
+    "right_conversion": "q_urdf = q_reference - pi/2",
+    "left_conversion": "q_urdf = pi/2 - q_reference"
+  },
+  "head_removed": true,
+  "joint_effort_cap_nm": {
+    "hip": 17,
+    "thigh": 17,
+    "calf": 17
+  }
 }
