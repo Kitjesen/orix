@@ -1,6 +1,6 @@
-# V67 MoE-CTS 训练快照
+# 历史 V67 MoE-CTS 训练快照
 
-本目录对应正在运行的 SmallDog V67 / R6 多地形训练，模型为 `v67_sim_r3`。正式训练资产位于 `v67_cts/assets/smalldog_v67`，当前任务的完整源码位于 `runtime/`。
+本页记录原带头版 SmallDog V67 / R6 多地形训练，模型为 `v67_sim_r3`，其冻结源码位于 `runtime/`。当前分支的 `v67_cts/assets/smalldog_v67` 已更新为无头 `v67_sim_r5_headless`；下文历史 R6 指令和权重不代表无头 FR-Net 训练。需要复现原 R6 时使用原带头版本及其配套资产。无头恢复实验的生效参数见 [recovery_headless/](recovery_headless/)。
 
 ## 已冻结的环境
 

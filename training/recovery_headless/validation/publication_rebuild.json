@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": {
+    "tracked_inputs_only": true,
+    "clean_output_rebuild": true,
+    "model_contract_identical": true,
+    "urdf_identical": true,
+    "standing_pose_identical": true,
+    "rebuilt_asset_portability": true
+  },
+  "copied_input_files": 54,
+  "note": "Rebuilt in an isolated temporary directory from repository-tracked inputs; did not modify the running training asset."
+}

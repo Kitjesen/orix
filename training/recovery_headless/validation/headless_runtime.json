@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "checks": [
+    "fr_reference_limits_minus1p57_to3p49",
+    "fr_vertical_reference_zero",
+    "fl_reference_limits_minus1p57_to3p49",
+    "fl_vertical_reference_zero",
+    "rr_reference_limits_minus1p57_to3p49",
+    "rr_vertical_reference_zero",
+    "rl_reference_limits_minus1p57_to3p49",
+    "rl_vertical_reference_zero",
+    "physics_limits_match_new_urdf",
+    "new_usd_version_loaded",
+    "action_targets_use_new_middle90_percent",
+    "default_pose_within_new_action_window",
+    "zero_policy_latent_retains_default_pose",
+    "policy_reaches_new_lower_target_bounds",
+    "policy_reaches_new_upper_target_bounds",
+    "all12_torque_limits17",
+    "both_actuator_groups_saturation17",
+    "usd_headless_base_mass",
+    "headless_contract_active",
+    "20_steps_finite_and_torque_bounded"
+  ],
+  "asset_version": "v67_sim_r5_headless",
+  "num_envs": 4,
+  "control_steps": 20,
+  "joints": [
+    {
+      "name": "fl_hip_joint",
+      "physics_limits_rad": [
+        -1.0499998331069946,
+        1.0499998331069946
+      ]
+    },
+    {
+      "name": "fr_hip_joint",
+      "physics_limits_rad": [
+        -1.0499998331069946,
+        1.0499998331069946
+      ]
+    },
+    {
+      "name": "rl_hip_joint",
+      "physics_limits_rad": [
+        -1.0499998331069946,
+        1.0499998331069946
+      ]
+    },
+    {
+      "name": "rr_hip_joint",
+      "physics_limits_rad": [
+        -1.0499998331069946,
+        1.0499998331069946
+      ]
+    },
+    {
+      "name": "fl_thigh_joint",
+      "physics_limits_rad": [
+        -1.919203519821167,
+        3.140796422958374
+      ]
+    },
+    {
+      "name": "fr_thigh_joint",
+      "physics_limits_rad": [
+        -3.140796422958374,
+        1.919203519821167
+      ]
+    },
+    {
+      "name": "rl_thigh_joint",
+      "physics_limits_rad": [
+        -1.919203519821167,
+        3.140796422958374
+      ]
+    },
+    {
+      "name": "rr_thigh_joint",
+      "physics_limits_rad": [
+        -3.140796422958374,
+        1.919203519821167
+      ]
+    },
+    {
+      "name": "fl_calf_joint",
+      "physics_limits_rad": [
+        -2.0999996662139893,
+        -0.3999999761581421
+      ]
+    },
+    {
+      "name": "fr_calf_joint",
+      "physics_limits_rad": [
+        0.3999999761581421,
+        2.0999996662139893
+      ]
+    },
+    {
+      "name": "rl_calf_joint",
+      "physics_limits_rad": [
+        -2.0999996662139893,
+        -0.3999999761581421
+      ]
+    },
+    {
+      "name": "rr_calf_joint",
+      "physics_limits_rad": [
+        0.3999999761581421,
+        2.0999996662139893
+      ]
+    }
+  ],
+  "action_targets": {
+    "fr_hip_joint": [
+      -0.9449999928474426,
+      0.9449999928474426
+    ],
+    "fr_thigh_joint": [
+      -2.887796401977539,
+      1.6662036180496216
+    ],
+    "fr_calf_joint": [
+      0.48500001430511475,
+      2.015000104904175
+    ],
+    "fl_hip_joint": [
+      -0.9449999928474426,
+      0.9449999928474426
+    ],
+    "fl_thigh_joint": [
+      -1.6662036180496216,
+      2.887796401977539
+    ],
+    "fl_calf_joint": [
+      -2.015000104904175,
+      -0.48500001430511475
+    ],
+    "rr_hip_joint": [
+      -0.9449999928474426,
+      0.9449999928474426
+    ],
+    "rr_thigh_joint": [
+      -2.887796401977539,
+      1.6662036180496216
+    ],
+    "rr_calf_joint": [
+      0.48500001430511475,
+      2.015000104904175
+    ],
+    "rl_hip_joint": [
+      -0.9449999928474426,
+      0.9449999928474426
+    ],
+    "rl_thigh_joint": [
+      -1.6662036180496216,
+      2.887796401977539
+    ],
+    "rl_calf_joint": [
+      -2.015000104904175,
+      -0.48500001430511475
+    ]
+  },
+  "policy_action_bounds_low": [
+    -4.724999904632568,
+    -4.432486057281494,
+    -1.2300000190734863,
+    -4.724999904632568,
+    -4.675514221191406,
+    -1.8300001621246338,
+    -4.724999904632568,
+    -4.432486057281494,
+    -1.2300000190734863,
+    -4.724999904632568,
+    -4.675514221191406,
+    -1.8300001621246338
+  ],
+  "policy_action_bounds_high": [
+    4.724999904632568,
+    4.675514221191406,
+    1.8300001621246338,
+    4.724999904632568,
+    4.432486057281494,
+    1.2300000190734863,
+    4.724999904632568,
+    4.675514221191406,
+    1.8300001621246338,
+    4.724999904632568,
+    4.432486057281494,
+    1.2300000190734863
+  ],
+  "max_applied_torque_nm": 5.917964458465576,
+  "long_training_started": false
+}

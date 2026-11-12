@@ -1,0 +1,44 @@
+{
+  "asset_version": "v67_sim_r5_headless",
+  "upright_epsilon": 0.25,
+  "target_posture_epsilon": 0.1,
+  "num_envs": 2048,
+  "max_iterations": 2500,
+  "seed": 42,
+  "scratch": true,
+  "save_interval": 200,
+  "all_joint_torque_limit_nm": 17,
+  "started_at_asia_shanghai": "2026-11-12T20:10:07.657428+08:00",
+  "task": "RobotLab-Isaac-Recovery-Fall-Flat-Orix-FRNet-v5",
+  "asset_dir": "training/v67_cts/assets/smalldog_v67",
+  "python": "3.10",
+  "environment_versions": {
+    "isaacsim": "4.5.0.0",
+    "isaaclab": "0.46.2",
+    "torch": "2.7.0+cu128",
+    "numpy": "1.26.4"
+  },
+  "terrain": "flat plane",
+  "terrain_curriculum": false,
+  "initial_pose_curriculum": false,
+  "mass_randomization": {
+    "operation": "scale",
+    "range": [
+      0.9,
+      1.1
+    ],
+    "bodies": "all links",
+    "mode": "startup"
+  },
+  "additional_payload_kg_current": [
+    0,
+    0
+  ],
+  "additional_payload_kg_planned": [
+    0,
+    5
+  ],
+  "planned_payload_status": "requested for a later experiment; not implemented in this run",
+  "checkpoint_release_status": "no headless trained checkpoint published",
+  "source_scope": "effective configuration snapshot; FR-Net runtime source is not bundled in training/runtime (that directory is the historical MoE-CTS source)"
+}

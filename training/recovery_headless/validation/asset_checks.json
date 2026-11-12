@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "checks": {
+    "all_joint_geometry_axes_limits_unchanged": true,
+    "all_non_base_links_unchanged": true,
+    "no_head_visuals_or_colliders": true,
+    "head_electronics_zero": true,
+    "standing_pose_unchanged": true,
+    "base_mass_matches_removed_components": true,
+    "base_com_matches_independent_subtraction": true,
+    "base_inertia_matches_independent_subtraction": true,
+    "physical_inertia": true
+  },
+  "removed_mass_kg": 0.5694949886049503,
+  "removed_components": [
+    "head_upper",
+    "head_lower",
+    "head_face",
+    "black_visor",
+    "ear_right",
+    "ear_left",
+    "head_frame_bridge",
+    "head_screw_M3x20_1",
+    "head_nut_M3_envelope_1",
+    "head_screw_M3x20_2",
+    "head_nut_M3_envelope_2",
+    "head_screw_M3x20_3",
+    "head_nut_M3_envelope_3",
+    "head_screw_M3x20_4",
+    "head_nut_M3_envelope_4",
+    "head_electronics_allowance"
+  ],
+  "old_mass_kg": 13.902959597853824,
+  "new_mass_kg": 13.333464609253827,
+  "new_base_com_m": [
+    0.000673072100175455,
+    2.019719856227102e-06,
+    0.0604449763446066
+  ],
+  "base_inertia_eigenvalues": [
+    0.02618600141972817,
+    0.04544589544619205,
+    0.05777848567825002
+  ],
+  "mesh_count": 35,
+  "retained_base_geometry": [
+    "",
+    "orix_board_envelope_trial",
+    "body",
+    "body_upper",
+    "body_right_upper",
+    "body_right_lower",
+    "body_left_upper",
+    "body_left_lower",
+    "body_lower",
+    "body_front_panel",
+    "body_rear_panel",
+    "mount_L_rear_lower",
+    "mount_L_rear_upper",
+    "mount_L_front_lower",
+    "mount_L_front_upper",
+    "mount_R_rear_lower",
+    "mount_R_rear_upper",
+    "mount_R_front_lower",
+    "mount_R_front_upper",
+    "belly",
+    "side_-1",
+    "side_1",
+    "upper"
+  ]
+}

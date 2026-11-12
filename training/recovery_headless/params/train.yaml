@@ -1,0 +1,73 @@
+runner:
+  num_steps_per_env: 48
+  max_iterations: 2500
+  save_interval: 200
+  experiment_name: orix_frnet_flat_paper_v5
+  bootstrap_timeouts: true
+  observation_normalization: true
+algorithm:
+  num_learning_epochs: 5
+  num_mini_batches: 4
+  clip_param: 0.2
+  gamma: 0.99
+  lam: 0.95
+  value_loss_coef: 1.0
+  entropy_coef: 0.005
+  learning_rate: 0.0003
+  max_grad_norm: 1.0
+  use_clipped_value_loss: true
+  schedule: adaptive
+  desired_kl: 0.01
+  mcp_learning_rate: 0.001
+  reference_action_l2_coef: 0.0
+  zero_action_l2_coef: 0.0
+  zero_action_l2_upright_gate: false
+  zero_action_l2_gravity_xy_threshold: 0.18
+  zero_action_l2_ang_vel_threshold: 0.55
+  action_distribution_overflow_coef: 0.0
+  action_distribution_margin_std: 1.645
+  action_limit: 1.0
+  mcp_update_after_ppo: true
+  mcp_policy_kl_limit: 0.01
+policy:
+  actor_hidden_dims:
+  - 512
+  - 256
+  - 128
+  critic_hidden_dims:
+  - 512
+  - 256
+  - 128
+  init_noise_std: 0.3
+  num_one_step_obs: 42
+  temporal_steps: 5
+  num_mass_groups: 4
+  num_contact_bodies: 13
+  latent_dim: 16
+  mcp_decoder_condition_on_predictions: true
+  action_bounds_low:
+  - -4.724999904632568
+  - -4.432486057281494
+  - -1.2300000190734863
+  - -4.724999904632568
+  - -4.675514221191406
+  - -1.8300001621246338
+  - -4.724999904632568
+  - -4.432486057281494
+  - -1.2300000190734863
+  - -4.724999904632568
+  - -4.675514221191406
+  - -1.8300001621246338
+  action_bounds_high:
+  - 4.724999904632568
+  - 4.675514221191406
+  - 1.8300001621246338
+  - 4.724999904632568
+  - 4.432486057281494
+  - 1.2300000190734863
+  - 4.724999904632568
+  - 4.675514221191406
+  - 1.8300001621246338
+  - 4.724999904632568
+  - 4.432486057281494
+  - 1.2300000190734863
